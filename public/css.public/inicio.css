@@ -1,0 +1,257 @@
+body {
+    --background1: #0068BF;
+    --background2: #ffffff;
+    --background3: #65AE26;
+    --background4: #292D3E;
+    --background5: #323232;
+    --background6: #F6F4F2;
+    --color1: #3C3C3C;
+    --color2: #ffffff;
+    --color3: #65AE26;
+    --color4: #0378C0;
+    --color5: #000000;
+    --color6: #213E6E;
+
+    --color-des_home1: #3C9031;
+    --color-des_home2: #255783;
+}
+
+body {
+    background: var(--background2);
+}
+
+
+/*SECTION HOME*/
+section.des-home {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 0 var(--padding);
+}
+
+section.des-home .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 60px 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+section.des-home .container h3 {
+    text-align: center;
+    color: var(--color5);
+}
+
+section.des-home .container h1 {
+    text-align: center;
+    color: var(--color-des_home2);
+    margin: 20px 0;
+}
+
+section.des-home .container h1 b {
+    color: var(--color-des_home1);
+}
+
+section.des-home .container p,
+section.des-home .container h1,
+section.des-home .container h3 {
+    font-family: Nunito-Regular;
+    user-select: text;
+}
+
+section.des-home .container p {
+    text-align: center;
+    color: var(--color1);
+}
+
+
+
+
+
+/*SECTION PLANES*/
+section.des-plan {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 0 var(--padding);
+}
+
+section.des-plan .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 60px 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+section.des-plan .container h4 {
+    font-family: Nunito-Regular;
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--color-des_home1);
+}
+
+section.des-plan .container h2 {
+    text-align: center;
+    font-family: Nunito-Regular;
+    font-size: 1.5rem;
+    color: var(--color-des_home2);
+
+}
+
+section.des-plan .container .card-planes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px 0;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+section.des-plan .container .card-planes .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    border-radius: 5px;
+}
+
+section.des-plan .container .card-planes .card i {
+    font-size: 3rem;
+    color: var(--color-des_home1);
+}
+
+section.des-plan .container .card-planes .card span {
+    font-size: 0.8rem;
+    color: var(--color1);
+}
+
+section.des-plan .container .card-planes .card span.megas {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Oregano-Regular;
+    color: var(--color4);
+    letter-spacing: 1px;
+}
+
+section.des-plan .container .card-planes .card h3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color1);
+    font-family: Nunito-Regular;
+}
+
+section.des-plan .container .card-planes .card h3 b {
+    display: block;
+    margin-right: 5px;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+section.des-plan .container .card-planes .card h3 span.iva {
+    /*    background: #000;
+    */
+    color: var(--color2);
+    margin-left: 5px;
+    font-weight: normal;
+    font-size: 20px;
+    text-shadow:
+        1px 1px 2px var(--color4),
+        2px 2px 2px var(--color4),
+        -1px -1px 3px var(--color4),
+        -2px -2px 3px var(--color4);
+    font-family: Oregano-Regular;
+}
+
+
+section.des-plan .container .card-planes .card h4 {
+    color: var(--color4);
+    font-size: 1rem;
+}
+
+section.des-plan .container .card-planes .card a {
+    background: var(--background3);
+    color: var(--color2);
+    font-family: Nunito-Regular;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 180px;
+    margin: auto;
+    transition: all 0.2s ease;
+}
+
+section.des-plan .container .card-planes .card a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    text-decoration: underline;
+}
+
+section.des-plan .container .card-planes .card.popular {
+    position: relative;
+    transform: translateY(-15px);
+}
+
+section.des-plan .container .card-planes .card.popular i,
+section.des-plan .container .card-planes .card.popular span,
+section.des-plan .container .card-planes .card.popular h3,
+section.des-plan .container .card-planes .card.popular h3 b,
+section.des-plan .container .card-planes .card.popular h4,
+section.des-plan .container .card-planes .card.popular a {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+section.des-plan .container .card-planes .card.popular:before,
+section.des-plan .container .card-planes .card.popular:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+section.des-plan .container .card-planes .card.popular:before {
+    background-image: url(../../view/img.general/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+section.des-plan .container .card-planes .card.popular:after {
+    background: var(--background1);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+@media (max-width: 900px) {
+    section.des-plan .container .card-planes {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin-top: 0;
+    }
+
+    section.des-plan .container .card-planes .card.popular {
+        transform: unset;
+    }
+}
