@@ -23,6 +23,5 @@ Crea la base de datos
 Crea el archivo .env en la raiz del proyecto y configuralo
 
 ```env
-    DB_HOST =
-    DB_HOST=
+    HTTP_DOMAIN = {{YOUR_DOMAIN}}
 ```
