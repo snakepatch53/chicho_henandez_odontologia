@@ -1,8 +1,4 @@
-DROP DATABASE IF EXISTS odontologia;
-
-CREATE DATABASE odontologia;
-
-USE odontologia;
+DROP TABLE IF EXISTS informacion;
 
 CREATE TABLE informacion (
     informacion_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -34,6 +30,8 @@ CREATE TABLE informacion (
     informacion_error VARCHAR(50)
 ) ENGINE INNODB;
 
+DROP TABLE IF EXISTS privilegio;
+
 CREATE TABLE privilegio (
     privilegio_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     privilegio_nombre VARCHAR(50),
@@ -48,6 +46,8 @@ CREATE TABLE privilegio (
     privilegio_venta BOOLEAN
 ) ENGINE INNODB;
 
+DROP TABLE IF EXISTS usuario;
+
 CREATE TABLE usuario (
     usuario_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     usuario_nombre VARCHAR(50),
@@ -59,11 +59,15 @@ CREATE TABLE usuario (
     FOREIGN KEY (privilegio_id) REFERENCES privilegio (privilegio_id)
 ) ENGINE INNODB;
 
+DROP TABLE IF EXISTS bodega;
+
 CREATE TABLE bodega (
     bodega_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     bodega_nombre VARCHAR(50),
     bodega_descripcion TEXT
 ) ENGINE INNODB;
+
+DROP TABLE IF EXISTS proveedor;
 
 CREATE TABLE proveedor (
     proveedor_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -76,6 +80,8 @@ CREATE TABLE proveedor (
     proveedor_email VARCHAR(50),
     proveedor_ruc VARCHAR(50)
 ) ENGINE INNODB;
+
+DROP TABLE IF EXISTS cliente;
 
 CREATE TABLE cliente (
     cliente_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -92,6 +98,8 @@ CREATE TABLE cliente (
     cliente_email VARCHAR(50)
 ) ENGINE INNODB;
 
+DROP TABLE IF EXISTS producto;
+
 CREATE TABLE producto (
     producto_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     producto_nombre VARCHAR(50),
@@ -106,6 +114,8 @@ CREATE TABLE producto (
     FOREIGN KEY (bodega_id) REFERENCES bodega (bodega_id)
 ) ENGINE INNODB;
 
+DROP TABLE IF EXISTS producto_compra;
+
 CREATE TABLE producto_compra (
     producto_compra_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     producto_compra_fecha VARCHAR(20),
@@ -115,6 +125,8 @@ CREATE TABLE producto_compra (
     FOREIGN KEY (proveedor_id) REFERENCES proveedor (proveedor_id),
     FOREIGN KEY (usuario_id) REFERENCES usuario (usuario_id)
 ) ENGINE INNODB;
+
+DROP TABLE IF EXISTS producto_entrada;
 
 CREATE TABLE producto_entrada (
     producto_entrada_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -128,6 +140,8 @@ CREATE TABLE producto_entrada (
     FOREIGN KEY (producto_compra_id) REFERENCES producto_compra (producto_compra_id) ON DELETE CASCADE
 ) ENGINE INNODB;
 
+DROP TABLE IF EXISTS producto_venta;
+
 CREATE TABLE producto_venta (
     producto_venta_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     producto_venta_fecha VARCHAR(20),
@@ -136,6 +150,8 @@ CREATE TABLE producto_venta (
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES usuario (usuario_id)
 ) ENGINE INNODB;
+
+DROP TABLE IF EXISTS producto_salida;
 
 CREATE TABLE producto_salida (
     producto_salida_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,

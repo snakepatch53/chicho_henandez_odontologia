@@ -58,6 +58,7 @@ class Migration
     private string $host;
     private string $user;
     private string $pass;
+    private string $name;
     private int $port;
 
     private string $db_name;
@@ -65,11 +66,12 @@ class Migration
 
     private $current_table;
 
-    public function __construct(string $host, string $user, string $pass, int $port = 3306)
+    public function __construct(string $host, string $user, string $pass, string $name, int $port = 3306)
     {
         $this->host = $host;
         $this->user = $user;
         $this->pass = $pass;
+        $this->name = $name;
         $this->port = $port;
     }
 
@@ -131,7 +133,7 @@ class Migration
 
     private function getConnection()
     {
-        $connect = mysqli_connect($this->host, $this->user, $this->pass);
+        $connect = mysqli_connect($this->host, $this->user, $this->pass, $this->name, $this->port);
         if (!$connect) die("Connection failed: " . mysqli_connect_error());
         return $connect;
     }

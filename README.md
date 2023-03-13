@@ -1,9 +1,21 @@
 # MYSQL
 
-Al iniciar el proyecto ejecuta la ruta:
+Primero crea la base de datos
+
+```sql
+  CREATE DATABASE {{YOUR_DB_NAME}};
+  USE {{YOUR_DB_NAME}};
+```
+
+-   Asegurate de que el nombre de la base de datos sea el mismo que el que usas en el archivo .env
+-   Si estas en CPANEL tendras que crearla con ayuda de la interfaz grafica.
+
+# CONFIGURACION
+
+Luego puedes usar el servicio de configuración para crear las tablas y los datos inciales:
 
 ```http
-  YOUR_DOMAIN/service/configuration
+  {{YOUR_DOMAIN}}/service/configuration
 ```
 
 para generar la base de datos y las tablas.
