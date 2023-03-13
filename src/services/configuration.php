@@ -1,6 +1,5 @@
 <?php
 include("./src/dao/mysql.adapter.php");
-
 $migration = new Migration(
     $_ENV['DB_HOST'],
     $_ENV['DB_USER'],
