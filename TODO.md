@@ -76,10 +76,8 @@
 ✅ configuracion de control de versionamiento git, guthub y cpanel<br>
 ✅ diseño de paleta de colores<br>
 <br>
-<b><i>(viernes, 17 de marzo de 2023)</i></b><br>
+<b><i>(Lunes, 13 de marzo de 2023)</i></b><br>
 ✅ estructuracion de interfaz panel<br>
-<br>
-<b><i>(sábado, 18 de marzo de 2023)</i></b><br>
 ✅ diseño de header (panel) <b><br>
 ✅ diseño sidebar (panel)<br>
 ✅<br>
