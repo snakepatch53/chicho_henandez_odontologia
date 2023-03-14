@@ -44,7 +44,7 @@
 
 -   No lee las rutas correctamente.
 -   Lo que he podido determinar es que el Bramus/Router funciona correctamente, pero cuando registro las rutas a traves
-    de la clase RouterAdapter, no las lee correctamente y se salta las rutas anidadas para leer siempre la ultima.
+    de la clase RouterAdapter, no las lee correctamente y se salta las rutas anidadas para leer siempre la ultima.<br>
     ❌<br>
     ❌<br>
 
