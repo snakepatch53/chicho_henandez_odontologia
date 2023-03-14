@@ -1,4 +1,4 @@
-# MYSQL
+# 🐬 MYSQL
 
 Primero crea la base de datos
 
@@ -10,7 +10,7 @@ Primero crea la base de datos
 -   Asegurate de que el nombre de la base de datos sea el mismo que el que usas en el archivo .env
 -   Si estas en CPANEL tendras que crearla con ayuda de la interfaz grafica.
 
-# CONFIGURACION
+# 🛠 CONFIGURACION
 
 Luego puedes usar el servicio de configuración para crear las tablas y los datos inciales:
 
@@ -21,7 +21,7 @@ Luego puedes usar el servicio de configuración para crear las tablas y los dato
 para generar la base de datos y las tablas.
 Luego es importante que desabilites el servicio de configuración para que no se sobreescriban los datos.
 
-# LOGIN
+# 🚪 LOGIN
 
 Para iniciar sesion por primera vez usa los siguientes credenciales
 
@@ -30,7 +30,7 @@ Para iniciar sesion por primera vez usa los siguientes credenciales
   CONTRASEÑA: admin
 ```
 
-# .env
+# 📄 .env
 
 Crea el archivo .env en la raiz del proyecto y configuralo
 
