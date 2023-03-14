@@ -210,11 +210,17 @@ class Migration
     public function migrateFromSqlFile(string $file_path)
     {
         $connection = $this->getConnection();
-        $sql = file_get_contents($file_path);
+        $tables = mysqli_query($connection, "SHOW TABLES");
+        $sql = "SET FOREIGN_KEY_CHECKS = 0;";
+        while ($row = mysqli_fetch_array($tables)) {
+            $sql .= "DROP TABLE IF EXISTS " . $row[0] . ";";
+        }
+        $sql .= "SET FOREIGN_KEY_CHECKS = 1;";
+        $sql .= file_get_contents($file_path);
         if (mysqli_multi_query($connection, $sql)) {
             echo "Tables created successfully" . "<br>";
         } else {
-            echo "Error creating tables: " . mysqli_error($connection) . "<br>";
+            echo "Error executing sql file: " . mysqli_error($connection) . "<br>";
         }
         mysqli_close($connection);
     }

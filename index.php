@@ -10,7 +10,11 @@ date_default_timezone_set('America/Guayaquil');
 require_once __DIR__ . '/vendor/autoload.php';
 
 // cargamos las funciones
-require_once __DIR__ . '/src/functions/router.adapter.php';
+require_once __DIR__ . '/src/functions/RouterAdapter.php';
+require_once('./src/dao/MysqlAdapter.php');
+
+// cargamos los objetos de acceso a datos
+require_once('./src/dao/UserDao.php');
 
 // cargamos las variables de entorno
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -23,6 +27,8 @@ $router = new \Bramus\Router\Router();
 require __DIR__ . '/src/routes/services.php';
 require __DIR__ . '/src/routes/public.php';
 require __DIR__ . '/src/routes/panel.php';
+
+var_dump($router);
 
 // iniciamos el router
 $router->run();
