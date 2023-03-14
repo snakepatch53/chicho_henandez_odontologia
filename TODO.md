@@ -1,6 +1,6 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
-🟢 programacion de acceso a archivos publicos <i>fecha</i><br>
+🟢 programacion de acceso a archivos publicos <i><b>fecha</b></i><br>
 🟢 configuracion de control de versionamiento git, guthub y cpanel <br>
 🟢 diseño de paleta de colores <br>
 🟢 diseño de header (clientes) <br>
