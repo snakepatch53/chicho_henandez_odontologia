@@ -40,7 +40,7 @@
 
 # ❌ ERRORES QUE TENGO QUE SOLUCIONAR ❌
 
-## ❌ Error no sintactico en el archivo _src/functions/RouterAdapter.php_ en el metodo _getHTML_: <br>
+### ❌ Error no sintactico en el archivo _src/functions/RouterAdapter.php_ en el metodo _getHTML_: <br>
 
 -   No lee las rutas correctamente.
 -   Lo que he podido determinar es que el Bramus/Router funciona correctamente, pero cuando registro las rutas a traves
