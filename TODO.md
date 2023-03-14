@@ -1,47 +1,49 @@
-#COSAS QUE TENGO QUE HACER 🟢
-🟢 programacion de acceso a archivos publicos
-🟢 configuracion de control de versionamiento git, guthub y cpanel
-🟢 diseño de paleta de colores
-🟢 diseño de header (clientes)
-🟢 diseño de footer (clientes)
-🟢 diseño de pagina inicio (clientes)
-🟢 diseño de pagina registro (clientes)
-🟢 diseño de pagina login (clientes)
-🟢 diseño de pagina de trabajos realizados (clientes)
-🟢 diseño de pagina contactos (clientes)
-🟢 diseño de pagina cistas (clientes)
-🟢 programacion de controlador pagina publica con javascript
-🟢 diseño de base de datos sql
-🟢 programacion de adaptador de acceso a datos
-🟢 programacion de objetos de acceso a datos
-🟢 reunion feedbacks
-🟢 incorporacion de feedbacks
-🟢 diseño de pagina perfil de usuario (panel)
-🟢 diseño de pagina informacion (administrador panel)
-🟢 diseño de pagina slider (administrador panel)
-🟢 diseño de pagina informacion (administrador panel)
-🟢 diseño de pagina usuarios (administrador panel)
-🟢 diseño de pagina clientes (administrador panel)
-🟢 diseño de pagina servicios (administrador panel)
-🟢 diseño de pagina citas (administrador panel)
-🟢 control de sesiones
-🟢 presentacion de desde la base de datos en todas las interfaces
-🟢 reunion de presentacion
-🟢 ultimos detalles
-
+#COSAS QUE TENGO QUE HACER 🟢 \n
+🟢 programacion de acceso a archivos publicos \n
+🟢 configuracion de control de versionamiento git, guthub y cpanel \n
+🟢 diseño de paleta de colores \n
+🟢 diseño de header (clientes) \n
+🟢 diseño de footer (clientes) \n
+🟢 diseño de pagina inicio (clientes) \n
+🟢 diseño de pagina registro (clientes) \n
+🟢 diseño de pagina login (clientes) \n
+🟢 diseño de pagina de trabajos realizados (clientes) \n
+🟢 diseño de pagina contactos (clientes) \n
+🟢 diseño de pagina cistas (clientes) \n
+🟢 programacion de controlador pagina publica con javascript \n
+🟢 diseño de base de datos sql \n
+🟢 programacion de adaptador de acceso a datos \n
+🟢 programacion de objetos de acceso a datos \n
+🟢 reunion feedbacks \n
+🟢 incorporacion de feedbacks \n
+🟢 diseño de pagina perfil de usuario (panel) \n
+🟢 diseño de pagina informacion (administrador panel) \n
+🟢 diseño de pagina slider (administrador panel) \n
+🟢 diseño de pagina informacion (administrador panel) \n
+🟢 diseño de pagina usuarios (administrador panel) \n
+🟢 diseño de pagina clientes (administrador panel) \n
+🟢 diseño de pagina servicios (administrador panel) \n
+🟢 diseño de pagina citas (administrador panel) \n
+🟢 control de sesiones \n
+🟢 presentacion de desde la base de datos en todas las interfaces \n
+🟢 reunion de presentacion \n
+🟢 ultimos detalles \n
 
 # COSAS QUE ESTOY HACIENDO 🔴
+
 🔴 diseño de pagina informacion (administrador panel)
 🔴
 🔴
 
 # ERRORES QUE TENGO QUE SOLUCIONAR ❌
-❌ Error no sintactico en el archivo *src/functions/RouterAdapter.php* en el metodo *getHTML*:
-- No lee las rutas correctamente.
-- Lo que he podido determinar es que el Bramus/Router funciona correctamente, pero cuando registro las rutas a traves
-de la clase RouterAdapter, no las lee correctamente y se salta las rutas anidadas para leer siempre la ultima.
-❌
-❌
+
+❌ Error no sintactico en el archivo _src/functions/RouterAdapter.php_ en el metodo _getHTML_:
+
+-   No lee las rutas correctamente.
+-   Lo que he podido determinar es que el Bramus/Router funciona correctamente, pero cuando registro las rutas a traves
+    de la clase RouterAdapter, no las lee correctamente y se salta las rutas anidadas para leer siempre la ultima.
+    ❌
+    ❌
 
 #COSAS REALIZADAS ✅
 ✅ estructuracion de proyecto
