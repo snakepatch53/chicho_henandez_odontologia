@@ -1,4 +1,5 @@
-#COSAS QUE TENGO QUE HACER 🟢 <br>
+# 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
+
 🟢 programacion de acceso a archivos publicos <br>
 🟢 configuracion de control de versionamiento git, guthub y cpanel <br>
 🟢 diseño de paleta de colores <br>
@@ -31,15 +32,15 @@
 🟢<br>
 🟢<br>
 
-# COSAS QUE ESTOY HACIENDO 🔴
+# 🔴 COSAS QUE ESTOY HACIENDO 🔴
 
 🔴 diseño de pagina informacion (administrador panel) <br>
 🔴<br>
 🔴<br>
 
-# ERRORES QUE TENGO QUE SOLUCIONAR ❌
+# ❌ ERRORES QUE TENGO QUE SOLUCIONAR ❌
 
-❌ Error no sintactico en el archivo _src/functions/RouterAdapter.php_ en el metodo _getHTML_: <br>
+## ❌ Error no sintactico en el archivo _src/functions/RouterAdapter.php_ en el metodo _getHTML_: <br>
 
 -   No lee las rutas correctamente.
 -   Lo que he podido determinar es que el Bramus/Router funciona correctamente, pero cuando registro las rutas a traves
@@ -47,7 +48,8 @@
     ❌<br>
     ❌<br>
 
-#COSAS REALIZADAS ✅
+# ✅ COSAS REALIZADAS ✅
+
 ✅ estructuracion de proyecto<br>
 ✅ estructuracion de interfaz clientes<br>
 ✅ programacion de router y htaccess<br>
