@@ -17,7 +17,7 @@
     user-select: none;
     outline: none;
     border-style: none;
-    --max-width: 1200px;
+    --max-width: 1300px;
     --padding: 50px;
     --header-height: 90px;
 }

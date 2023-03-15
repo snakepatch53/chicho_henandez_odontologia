@@ -5,17 +5,17 @@
         </a>
         <ul class="supp">
             <li>
-                <a href="<?= $DATA['http_domain'] ?>inicio" class="link">
+                <a href="<?= $DATA['http_domain'] ?>home" class="link <?= strtolower($DATA['title']) == "home" ? "active" : "" ?>">
                     <span>Inicio</span>
                 </a>
             </li>
             <li>
-                <a href="<?= $DATA['http_domain'] ?>contactos" class="link">
+                <a href="<?= $DATA['http_domain'] ?>contactos" class="link <?= strtolower($DATA['title']) == "contactos" ? "active" : "" ?>">
                     <span>Contactos</span>
                 </a>
             </li>
             <li>
-                <a href="<?= $DATA['http_domain'] ?>Nosotros" class="link">
+                <a href="<?= $DATA['http_domain'] ?>nosotros" class="link <?= strtolower($DATA['title']) == "nosotros" ? "active" : "" ?>">
                     <span>Nosotros</span>
                 </a>
             </li>

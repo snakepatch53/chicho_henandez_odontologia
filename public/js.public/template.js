@@ -1,5 +1,5 @@
 const TemplateMain = function () {
-    window.onscroll = () => Template.fun.onscroll();
+    // window.onscroll = () => Template.fun.onscroll();
     Template.view.menu.onclick = () => Template.fun.toggleMenu();
     Template.fun.SmoothScroll();
 };

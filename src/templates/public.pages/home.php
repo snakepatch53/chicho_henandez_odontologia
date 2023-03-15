@@ -17,6 +17,7 @@
         <slider>
             <?php include('./src/templates/public.component/slider.php') ?>
         </slider>
+
         hola
         jajajajajja <br>
         jajajajajja <br>
@@ -27,7 +28,6 @@
         jajajajajja <br>
         jajajajajja <br>
         jajajajajja <br>
-        <img src="https://imborrable.com/wp-content/uploads/2022/10/logos-llasera.jpg" alt="">
     </main>
 
     <footer id="section-footer">

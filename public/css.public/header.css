@@ -45,12 +45,13 @@ header nav a.logo img {
 }
 
 header nav ul {
+    flex:1;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /*    width: 100%;*/
-    min-width: 500px;
-    max-width: 800px;
+        width: 100%;
+/*    min-width: 500px;*/
+    max-width: 600px;
     height: 100%;
 }
 
@@ -68,12 +69,69 @@ header nav a.link {
     font-weight: bold;
     font-size: 1.1em;
     padding: 10px 15px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+header nav a.link:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin: auto;
+    border-radius: 50%;
+    background: #000000;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+header nav a.link:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+header nav a.link:hover:before {
+    opacity: 1;
+    transition: all 0.2s ease;
 }
 
 header nav a.link.button {
     background: #a9def5;
     border-radius: 10px;
     white-space: nowrap;
+    transition: all 0.2s ease;
+/*
+    font-weight: normal;
+    letter-spacing: 2px;
+*/
+}
+
+header nav a.link.button:hover {
+    background: #6bcd8d;
+/*    color: #ffffff;*/
+    transition: all 0.2s ease;
+}
+
+header nav a.link.button:hover:before {
+    display: none;
+}
+
+header nav a.link.active {
+    color: #24abe5;
+    pointer-events: none;
+}
+
+header nav a.link.active:hover {
+    transform: unset;
+}
+
+header nav a.link.active:before {
+    opacity: 1;
+    background: #24abe5;
 }
 
 header menu nav .burguer-menu,
