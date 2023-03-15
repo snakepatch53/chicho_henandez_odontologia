@@ -1,4 +1,4 @@
-# 📄 .env
+# 📄 VARIABLES DE ENTORNO
 
 Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
 
@@ -26,7 +26,7 @@ Primero crea la base de datos
 -   Asegurate de que el nombre de la base de datos sea el mismo que el que usas en el archivo .env
 -   Si estas en CPANEL tendras que crearla con ayuda de la interfaz grafica.
 
-# 🛠 CONFIGURACION
+## 🛠 CONFIGURACION
 
 Luego puedes usar el servicio de configuración para crear las tablas y los datos inciales:
 
@@ -37,7 +37,7 @@ Luego puedes usar el servicio de configuración para crear las tablas y los dato
 para generar la base de datos y las tablas.
 Luego es importante que desabilites el servicio de configuración para que no se sobreescriban los datos.
 
-# 📄 .htaccess
+# 🪶 APACHE
 
 Crea el archivo <b><i>.htaccess</i></b> en la raiz del proyecto y configuralo
 
@@ -60,7 +60,7 @@ Crea el archivo <b><i>.htaccess</i></b> en la raiz del proyecto y configuralo
   </Files>
 ```
 
-En caso de que tu proyecto ya este funcionando en un dominio y quieras activar el SSL, puedes agregar esta configuracion en htaccess
+### 🛠 En caso de que tu proyecto ya este funcionando en un dominio y quieras activar el SSL, puedes agregar esta configuracion en htaccess
 
 ```htaccess
   RewriteEngine On
