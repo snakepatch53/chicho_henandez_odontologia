@@ -1,3 +1,19 @@
+# 📄 .env
+
+Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
+
+```env
+  # PROJECT
+  HTTP_DOMAIN = {{YOUR_DOMAIN}}
+
+  # MYSQLI
+  DB_HOST = {{YOUR_DB_HOST}}
+  DB_USER = {{YOUR_DB_USER}}
+  DB_PASS = {{YOUR_DB_PASS}}
+  DB_NAME = {{YOUR_DB_NAME}}
+  DB_PORT =  {{YOUR_DB_PORT}}
+```
+
 # 🐬 MYSQL
 
 Primero crea la base de datos
@@ -20,22 +36,6 @@ Luego puedes usar el servicio de configuración para crear las tablas y los dato
 
 para generar la base de datos y las tablas.
 Luego es importante que desabilites el servicio de configuración para que no se sobreescriban los datos.
-
-# 📄 .env
-
-Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
-
-```env
-  # PROJECT
-  HTTP_DOMAIN = {{YOUR_DOMAIN}}
-
-  # MYSQLI
-  DB_HOST = {{YOUR_DB_HOST}}
-  DB_USER = {{YOUR_DB_USER}}
-  DB_PASS = {{YOUR_DB_PASS}}
-  DB_NAME = {{YOUR_DB_NAME}}
-  DB_PORT =  {{YOUR_DB_PORT}}
-```
 
 # 📄 .htaccess
 
