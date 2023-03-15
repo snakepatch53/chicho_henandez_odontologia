@@ -48,6 +48,8 @@
 
 <b><i>(Lunes, 13 de marzo de 2023)</i></b><br>
 🔴 diseño de pagina informacion (administrador panel) <br>
+<b><i>(Martes, 14 de marzo de 2023)</i></b><br>
+🔴 Del diseño del header aun me falta agregar las animaciones a los botones<br>
 🔴<br>
 🔴<br>
 
