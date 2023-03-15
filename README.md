@@ -60,7 +60,7 @@ Crea el archivo <b><i>.htaccess</i></b> en la raiz del proyecto y configuralo
   </Files>
 ```
 
-### 🛠 En caso de que tu proyecto ya este funcionando con un dominio y usar _https_, puedes agregar esta configuracion en _htaccess_
+### 🛠 En caso de que tu proyecto ya este funcionando con un dominio y quieras usar _https_, puedes agregar esta configuracion en _htaccess_
 
 ```htaccess
   RewriteEngine On
