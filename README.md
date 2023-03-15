@@ -21,18 +21,9 @@ Luego puedes usar el servicio de configuración para crear las tablas y los dato
 para generar la base de datos y las tablas.
 Luego es importante que desabilites el servicio de configuración para que no se sobreescriban los datos.
 
-# 🚪 LOGIN
-
-Para iniciar sesion por primera vez usa los siguientes credenciales
-
-```txt
-  USUARIO: admin
-  CONTRASEÑA: admin
-```
-
 # 📄 .env
 
-Crea el archivo .env en la raiz del proyecto y configuralo
+Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
 
 ```env
   # PROJECT
@@ -48,7 +39,7 @@ Crea el archivo .env en la raiz del proyecto y configuralo
 
 # 📄 .htaccess
 
-Crea el archivo .htaccess en la raiz del proyecto y configuralo
+Crea el archivo <b><i>.htaccess</i></b> en la raiz del proyecto y configuralo
 
 ```htaccess
   RewriteEngine On
@@ -76,4 +67,13 @@ En caso de que tu proyecto ya este funcionando en un dominio y quieras activar e
   RewriteCond %{HTTPS} !=on
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
   Header always set Content-Security-Policy "upgrade-insecure-requests;"
+```
+
+# 🚪 LOGIN
+
+Para iniciar sesion por primera vez usa los siguientes credenciales
+
+```txt
+  USUARIO: admin
+  CONTRASEÑA: admin
 ```
