@@ -143,6 +143,7 @@ header menu nav .burguer-menu {
     cursor: pointer;
     font-size: 1em;
     width: 70px;
+    background: transparent;
 }
 
 
