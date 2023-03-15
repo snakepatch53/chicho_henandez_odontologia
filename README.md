@@ -46,7 +46,7 @@ Crea el archivo .env en la raiz del proyecto y configuralo
   DB_PORT =  {{YOUR_DB_PORT}}
 ```
 
-# .htaccess
+# 📄 .htaccess
 
 Crea el archivo .htaccess en la raiz del proyecto y configuralo
 
