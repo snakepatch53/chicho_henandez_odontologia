@@ -204,8 +204,13 @@ header menu nav .burguer-menu {
         transition: all 0.2s 0.05s ease;
     }
     
+    header {
+        transition: 0.2s 0.1s ease;
+    }
+    
     header.open {
         background: #fff;
+        transition: 0.2s 0.1s ease;
     }
 
     /*    open*/
