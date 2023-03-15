@@ -1,7 +1,6 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
 <b><i>(lunes, 13 de marzo de 2023)</i></b><br>
-🟢 diseño de header (clientes) <br>
 🟢 diseño de footer (clientes) <br>
 🟢 diseño de pagina inicio (clientes) <br>
 <br>
@@ -80,5 +79,8 @@
 ✅ estructuracion de interfaz panel<br>
 ✅ diseño de header (panel) <b><br>
 ✅ diseño sidebar (panel)<br>
+<br>
+<b><i>(Martes, 14 de marzo de 2023)</i></b><br>
+✅ diseño de header (clientes)<br>
 ✅<br>
 ✅<br>

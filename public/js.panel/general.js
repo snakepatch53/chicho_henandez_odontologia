@@ -14,6 +14,9 @@ window.onresize = () => {
     }
 };
 
+/**
+ * If the user is logged in, log them out and redirect them to the login page.
+ */
 function logout() {
     fetch_query(null, "user", "logout").then((res) => {
         if (res) return (location.href = $proyect.url + "panel");
