@@ -178,7 +178,7 @@ header menu nav .burguer-menu {
         height: calc(100vh - var(--header-height));
         max-height: 0;
         overflow: hidden;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.88);
         transition: all 0.2s ease;
     }
 
@@ -202,6 +202,10 @@ header menu nav .burguer-menu {
         margin-right: 0;
         margin-left: 0;
         transition: all 0.2s 0.05s ease;
+    }
+    
+    header.open {
+        background: #fff;
     }
 
     /*    open*/
