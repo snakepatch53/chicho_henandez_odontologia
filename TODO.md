@@ -1,7 +1,5 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
-<b><i>(lunes, 13 de marzo de 2023)</i></b><br>
-🟢 diseño de pagina inicio (clientes) <br>
 <br>
 <b><i>(martes, 14 de marzo de 2023)</i></b><br>
 🟢 diseño de pagina registro (clientes) <br>
@@ -86,5 +84,6 @@
 <b><i>(Miercoles, 15 de marzo de 2023)</i></b><br>
 ✅ firma SSL para redireccion a HTTPS <br>
 ✅ diseño de footer (clientes) <br>
+✅ diseño de pagina inicio (clientes) <br>
 ✅<br>
 ✅<br>
