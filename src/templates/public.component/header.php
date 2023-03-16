@@ -1,7 +1,7 @@
 <menu>
     <nav>
         <a href="<?= $DATA['http_domain'] ?>inicio" class="logo">
-            <img src="<?= $DATA['http_domain'] ?>public/img/logo2.png" alt="Logo Morona Net">
+            <img src="<?= $DATA['http_domain'] ?>public/img/logo3.png" alt="Logo Morona Net">
         </a>
         <ul class="supp">
             <li>

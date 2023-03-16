@@ -16,7 +16,7 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
 
 # 🐬 MYSQL
 
-Primero crea la base de datos
+Crea la base de datos
 
 ```sql
   CREATE DATABASE {{YOUR_DB_NAME}};

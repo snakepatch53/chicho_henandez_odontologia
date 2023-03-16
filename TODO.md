@@ -1,7 +1,6 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
 <b><i>(lunes, 13 de marzo de 2023)</i></b><br>
-🟢 diseño de footer (clientes) <br>
 🟢 diseño de pagina inicio (clientes) <br>
 <br>
 <b><i>(martes, 14 de marzo de 2023)</i></b><br>
@@ -15,13 +14,13 @@
 🟢 programacion de controlador pagina publica con javascript <br>
 <br>
 <b><i>(jueves, 16 de marzo de 2023)</i></b><br>
+🟢 reunion feedbacks <br>
+🟢 incorporacion de feedbacks <br>
+<br>
+<b><i>(viernes, 17 de marzo de 2023)</i></b><br>
 🟢 diseño de base de datos sql <br>
 🟢 programacion de adaptador de acceso a datos <br>
 🟢 programacion de objetos de acceso a datos <br>
-<br>
-<b><i>(viernes, 17 de marzo de 2023)</i></b><br>
-🟢 reunion feedbacks <br>
-🟢 incorporacion de feedbacks <br>
 <br>
 <b><i>(domingo, 19 de marzo de 2023)</i></b><br>
 🟢 diseño de pagina perfil de usuario (panel) <br>
@@ -84,5 +83,8 @@
 ✅ diseño de header (clientes)<br>
 ✅ diseño de slider (clientes)<br>
 ✅ Animaciones en los botones<br>
+<b><i>(Miercoles, 15 de marzo de 2023)</i></b><br>
+✅ firma SSL para redireccion a HTTPS <br>
+✅ diseño de footer (clientes) <br>
 ✅<br>
 ✅<br>
