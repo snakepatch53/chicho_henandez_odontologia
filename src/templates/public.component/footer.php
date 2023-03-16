@@ -26,6 +26,5 @@
     </div>
 </section>
 <section class="row copy">
-
     <p class="copy">Dr. Claudio Ayora © <?= date('Y') ?> Todos los derechos reservados.</p>
 </section>
