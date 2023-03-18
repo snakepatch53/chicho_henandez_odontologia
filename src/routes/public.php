@@ -99,3 +99,10 @@ $router->get('/panel/login', function () {
     $DATA['name'] = 'login';
     include('./src/templates/panel.pages/login.php');
 });
+
+$router->get('/panel', function () {
+    global $DATA;
+    $DATA['title'] = 'home';
+    $DATA['name'] = 'Home';
+    include('./src/templates/panel.pages/home.php');
+});
