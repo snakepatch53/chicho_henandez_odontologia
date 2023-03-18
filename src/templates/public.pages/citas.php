@@ -80,10 +80,10 @@
                         <label for="especialidad">Elegir una especialidad: </label>
                         <select name="especialidad" id="especialidad">
                             <option value="">Seleccione una opcion</option>
-                            <option value="1">Carillas</option>
-                            <option value="2">Sarro</option>
-                            <option value="3">Brakets</option>
-                            <option value="4">Caries</option>
+                            <option value="1">Ortodoncia</option>
+                            <option value="2">Profilaxis</option>
+                            <option value="3">Carillas</option>
+                            <option value="4">Endodoncia</option>
                         </select>
                     </div>
                 </form>
@@ -99,23 +99,23 @@
                 <ul>
                     <li>
                         <img src="<?= $DATA['http_domain'] ?>public/img/servicio_caries.png" alt="Imagen de Servicio Caries">
-                        <h3>Caries</h3>
-                        <p>La carilla dental es una pequeña capa de porcelana que se adhiere a la superficie de los dientes para mejorar su apariencia. Las carillas dentales pueden ser una excelente opción para corregir los dientes rotos, descoloridos, mal alineados, con espacios o con forma irregular.</p>
+                        <h3>Ortodoncia</h3>
+                        <p>La ortodoncia es la especialidad de la odontología que se encarga de corregir la posición de los dientes y de los huesos maxilares. La ortodoncia puede ser necesaria para corregir problemas de mordida, de alineación de los dientes o de la posición de los dientes.</p>
                     </li>
                     <li>
                         <img src="<?= $DATA['http_domain'] ?>public/img/servicio_frenillos.png" alt="Imagen de Servicio Brakets">
-                        <h3>Brakets</h3>
-                        <p>Los brackets son aparatos ortodóncicos que se colocan en los dientes para corregir la posición de los mismos. Los brackets pueden ser de metal, cerámicos o de zafiro. Los brackets de metal son los más económicos y duraderos, pero son los que más se notan en la boca.</p>
+                        <h3>Profilaxis</h3>
+                        <p>La profilaxis es una limpieza dental profunda que se realiza en la clínica dental. La profilaxis elimina la placa dental y el sarro de los dientes y de las encías. La profilaxis también elimina las manchas de los dientes.</p>
                     </li>
                     <li>
                         <img src="<?= $DATA['http_domain'] ?>public/img/servicio_sarro.png" alt="Imagen de Servicio Sarro">
-                        <h3>Sarro</h3>
-                        <p>El sarro es una placa dura y pegajosa que se forma en los dientes y en las encías. El sarro se forma cuando la placa dental no se retira con la limpieza diaria de los dientes. El sarro puede causar enfermedad de las encías y puede provocar la pérdida de los dientes.</p>
+                        <h3>Carillas</h3>
+                        <p>Las carillas son láminas de porcelana o de composite que se adhieren a la superficie de los dientes. Las carillas se utilizan para corregir problemas estéticos como los dientes rotos, los dientes desalineados, los dientes con manchas, los dientes con espacios entre ellos, los dientes con forma irregular, etc.</p>
                     </li>
                     <li>
                         <img src="<?= $DATA['http_domain'] ?>public/img/servicio_caries.png" alt="Imagen de Servicio Caries">
-                        <h3>Caries</h3>
-                        <p>Las caries son pequeños agujeros en los dientes que se forman cuando la placa dental se endurece y se convierte en sarro. El sarro contiene bacterias que causan la caries. La caries puede causar dolor y puede provocar la pérdida de los dientes.</p>
+                        <h3>Endodoncia</h3>
+                        <p>La endodoncia es una rama de la odontología que se encarga de tratar las infecciones de los dientes. La endodoncia se realiza cuando el nervio de un diente está infectado. La endodoncia se realiza para salvar el diente y evitar que se pierda.</p>
                     </li>
                 </ul>
             </div>

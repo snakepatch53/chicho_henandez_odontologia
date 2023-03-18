@@ -28,7 +28,7 @@
                                 <!-- form | ini -->
                                 <div class="row g-3">
                                     <div class="col-md-12 text-center">
-                                        <img class="logo" src="<?= $DATA['http_domain'] ?>public/img/logo.png" alt="Logo">
+                                        <img class="logo" src="<?= $DATA['http_domain'] ?>public/img/logo1.png" alt="Logo">
                                         <h3 class="mt-2">Login</h3>
                                     </div>
                                     <div class="col-md-12">

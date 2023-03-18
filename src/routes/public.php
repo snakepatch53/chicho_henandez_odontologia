@@ -92,3 +92,10 @@ $router->get('/citas', function () {
     $DATA['name'] = 'citas';
     include('./src/templates/public.pages/citas.php');
 });
+
+$router->get('/panel/login', function () {
+    global $DATA;
+    $DATA['title'] = 'Login';
+    $DATA['name'] = 'login';
+    include('./src/templates/panel.pages/login.php');
+});

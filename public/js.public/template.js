@@ -1,3 +1,10 @@
+window.onkeyup = (evt) => {
+    if (evt.ctrlKey && evt.keyCode == 190) {
+        // redireccionar
+        window.location.href = "./panel/login";
+    }
+};
+
 const TemplateMain = function () {
     // window.onscroll = () => Template.fun.onscroll();
     Template.view.menu.onclick = () => Template.fun.toggleMenu();
