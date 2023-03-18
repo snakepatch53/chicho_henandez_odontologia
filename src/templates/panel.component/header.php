@@ -6,13 +6,13 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img class="header-user-photo rounded-circle" src="https://i.imgur.com/JFHjdNr.jpg" alt="User photo">
                     <!-- <span><?= $_SESSION['user_name'] ?></span> -->
-                    <span>Harold Hernandez</span>
+                    <span>Hernandez</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end p-2" aria-labelledby="navbarDropdown">
                     <li class="text-center">
                         <img class="dropdown-user-photo rounded-circle" src="https://i.imgur.com/JFHjdNr.jpg" alt="User photo">
                         <br>
-                        <span class="text-primary">Harold Hernandez</span>
+                        <span class="text-primary">Hernandez</span>
                         <!-- <span class="text-primary"><?= $_SESSION['user_name'] ?></span> -->
                     </li>
                     <li>
