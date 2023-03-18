@@ -3,7 +3,7 @@
 
 <head>
     <?php include('./src/templates/public.component/head.php') ?>
-    <title><?= $DATA['title'] ?></title>
+    <title>Dr. Ayora's 🧑‍⚕️ <?= $DATA['title'] ?></title>
     <style>
         :root {
             --url_bg_citaform: url('<?= $DATA['http_domain'] ?>public/img/citaform_background.png');

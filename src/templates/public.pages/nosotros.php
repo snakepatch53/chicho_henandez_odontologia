@@ -3,7 +3,7 @@
 
 <head>
     <?php include('./src/templates/public.component/head.php') ?>
-    <title><?= $DATA['title'] ?></title>
+    <title>Dr. Ayora's 🧑‍⚕️ <?= $DATA['title'] ?></title>
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/nosotros.css">
 </head>
 
