@@ -91,6 +91,7 @@ section.filosofia .container h2 {
     margin-bottom: 30px;
     font-size: 30px;
     font-family: Nunito-Regular;
+    color: #213e6e;
 }
 
 section.filosofia .container .item {
@@ -98,10 +99,12 @@ section.filosofia .container .item {
 }
 
 section.filosofia .container .item p {
+    user-select: text;
     flex: 1;
     font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: bold;
+/*    letter-spacing: 2px;*/
+/*    font-weight: bold;*/
+    color: #fff;
     font-family: Nunito-Regular;
     text-align: justify;
 }

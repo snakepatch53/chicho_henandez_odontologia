@@ -52,7 +52,7 @@
                 <h2>Nuestra filosofía</h2>
                 <div class="item">
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt aliquam consequuntur cum, assumenda reprehenderit hic placeat tenetur laborum, repudiandae velit provident blanditiis magni rem nisi quisquam totam eos? Odio, incidunt.
+                        En nuestra clínica dental, nos enfocamos en ofrecer una atención personalizada y de alta calidad, utilizando las últimas tecnologías y técnicas en odontología. Nuestro objetivo es ayudar a nuestros pacientes a lograr una sonrisa saludable y radiante a través de objetivos personalizados, educación y atención centrada en el paciente.
                     </p>
                     <dv class="img">
                         <img src="<?= $DATA['http_domain'] ?>public/img/filosofia.png" alt="Imagen de Folosofia">
