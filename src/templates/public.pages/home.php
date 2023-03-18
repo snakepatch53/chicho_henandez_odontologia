@@ -29,19 +29,19 @@
             <div class="container">
                 <div class="item">
                     <img src="<?= $DATA['http_domain'] ?>public/img/servicio_frenillos.png" alt="Icono Frenillos">
-                    <span>Frenillos</span>
+                    <span>Ortodoncia</span>
                 </div>
                 <div class="item">
                     <img src="<?= $DATA['http_domain'] ?>public/img/servicio_caries.png" alt="Icono Caries">
-                    <span>Caries</span>
+                    <span>Profilaxis</span>
                 </div>
                 <div class="item">
                     <img src="<?= $DATA['http_domain'] ?>public/img/servicio_carillas.png" alt="Icono Carillas">
-                    <span>Carillas</span>
+                    <span>Carillas </span>
                 </div>
                 <div class="item">
                     <img src="<?= $DATA['http_domain'] ?>public/img/servicio_sarro.png" alt="Icono Sarro">
-                    <span>Sarro</span>
+                    <span>Endodoncia</span>
                 </div>
             </div>
         </section>
