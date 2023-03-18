@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/fontawesome/css/all.min.css">
 <!-- <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/config.css"> -->
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/animate.min.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/general.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/header.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/footer.css">

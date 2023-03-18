@@ -1,11 +1,11 @@
 <menu>
     <nav>
-        <a href="<?= $DATA['http_domain'] ?>inicio" class="logo">
+        <a href="<?= $DATA['http_domain'] ?>" class="logo">
             <img src="<?= $DATA['http_domain'] ?>public/img/logo3.png" alt="Logo Morona Net">
         </a>
         <ul class="supp">
             <li>
-                <a href="<?= $DATA['http_domain'] ?>home" class="link <?= strtolower($DATA['title']) == "home" ? "active" : "" ?>">
+                <a href="<?= $DATA['http_domain'] ?>" class="link <?= strtolower($DATA['title']) == "home" ? "active" : "" ?>">
                     <span>Inicio</span>
                 </a>
             </li>

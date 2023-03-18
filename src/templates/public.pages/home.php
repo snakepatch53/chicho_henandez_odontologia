@@ -20,12 +20,12 @@
         <?php include('./src/templates/public.component/header.php') ?>
     </header>
 
-    <main>
+    <main class="animate__animated animate__fadeIn">
         <slider>
             <?php include('./src/templates/public.component/slider.php') ?>
         </slider>
         <!--//? Servicios -->
-        <section class="servicios">
+        <section>
             <div class="container">
                 <div class="item">
                     <img src="<?= $DATA['http_domain'] ?>public/img/servicio_frenillos.png" alt="Icono Frenillos">

@@ -7,8 +7,6 @@
 🟢 diseño de pagina de trabajos realizados (clientes) <br>
 <br>
 <b><i>(miércoles, 15 de marzo de 2023)</i></b><br>
-🟢 diseño de pagina contactos (clientes) <br>
-🟢 diseño de pagina cistas (clientes) <br>
 🟢 programacion de controlador pagina publica con javascript <br>
 <br>
 <b><i>(jueves, 16 de marzo de 2023)</i></b><br>
@@ -85,5 +83,7 @@
 ✅ firma SSL para redireccion a HTTPS <br>
 ✅ diseño de footer (clientes) <br>
 ✅ diseño de pagina inicio (clientes) <br>
-✅<br>
+<b><i>(Sabado, 18 de marzo de 2023)</i></b><br>
+✅ diseño de pagina contactos (clientes) <br>
+✅ diseño de pagina citas (clientes) <br>
 ✅<br>

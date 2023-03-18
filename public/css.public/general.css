@@ -22,9 +22,25 @@
     --header-height: 90px;
 }
 
+body {
+    overflow-X: hidden;
+}
+
+
 
 main {
     min-height: 100vh;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+section .container {
+    flex: 1;
+    padding: 0 20px;
+    max-width: var(--max-width);
 }
 
 img {

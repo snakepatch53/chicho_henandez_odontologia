@@ -38,6 +38,7 @@ header menu nav {
 header nav a.logo {
     display: block;
     height: 100%;
+    max-width: 240px;
 }
 
 header nav a.logo img {

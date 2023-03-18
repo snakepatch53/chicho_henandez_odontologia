@@ -4,7 +4,7 @@
 <head>
     <?php include('./src/templates/public.component/head.php') ?>
     <title><?= $DATA['title'] ?></title>
-    <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/inicio.css">
+    <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/STYLE_NAME.css">
 </head>
 
 <body>

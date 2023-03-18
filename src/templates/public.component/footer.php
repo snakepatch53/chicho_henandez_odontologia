@@ -12,13 +12,13 @@
         <div class="social">
             <h2>Nuestras Redes</h2>
             <div class="social-icons">
-                <a target="_blank" href="#">
+                <a class="wht" target="_blank" href="#">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a target="_blank" href="#">
+                <a class="fb" target="_blank" href="#">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a target="_blank" href="#">
+                <a class="ins" target="_blank" href="#">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>

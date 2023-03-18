@@ -1,13 +1,4 @@
-section {
-    display: flex;
-    justify-content: center;
-}
 
-section .container {
-    flex: 1;
-    padding: 0 20px;
-    max-width: var(--max-width);
-}
 
 /* SECCION SERVICIOS */
 section.servicios .container {
@@ -222,10 +213,11 @@ section.consultar .item a {
     white-space: nowrap;
 }
 
-section.consultar .item a:active {
+section.consultar .item a:hover {
     background: transparent;
     border: solid 2px #46c071;
     color: #46c071;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
     transition: all 0.1s ease;
 }
 
