@@ -111,14 +111,14 @@ footer .row.copy p.copy {
         flex-direction: column;
         gap: 60px;
     }
-    
+
     footer .social .social-icons {
         max-width: 400px;
     }
-    
+
     footer section .row .logo img {
         width: 100%;
-        max-width: 100%;
+        max-width: 250px;
         height: auto;
     }
 }

@@ -24,10 +24,42 @@ $radapter = new RAdapter($router, $_TEMPLATE_PUBLIC_PATH, $_ENV['HTTP_DOMAIN']);
 // });
 
 
-// * Codigo temporal
-$radapter->getHTML('/', 'home');
-$radapter->getHTML('/index.php', 'home');
-// $router->get('/qrcode/{text}/{pass}', function ($text, $pass) {
-//     include('./src/functions/middleware_auth.php'); //auth
-//     include('./src/services/qrcode_api.php');
-// });
+// * Codigo temporal *ESTE ES UN PARCHE TEMPORAL*
+// $radapter->getHTML('/', 'home');
+// $radapter->getHTML('/index.php', 'home');
+
+
+$DATA = [
+    "title" => "",
+    "name" => "",
+    "path" => $_TEMPLATE_PUBLIC_PATH,
+    "http_domain" => $_ENV['HTTP_DOMAIN'],
+];
+$adapter = new MysqlAdapter(
+    $_ENV['DB_HOST'],
+    $_ENV['DB_USER'],
+    $_ENV['DB_PASS'],
+    $_ENV['DB_NAME'],
+    $_ENV['DB_PORT']
+);
+
+$router->get('/', function () {
+    global $DATA;
+    $DATA['title'] = 'Home';
+    $DATA['name'] = 'home';
+    include('./src/templates/public.pages/home.php');
+});
+
+$router->get('/inicio', function () {
+    global $DATA;
+    $DATA['title'] = 'Home';
+    $DATA['name'] = 'home';
+    include('./src/templates/public.pages/home.php');
+});
+
+$router->get('/index.php', function () {
+    global $DATA;
+    $DATA['title'] = 'Home';
+    $DATA['name'] = 'home';
+    include('./src/templates/public.pages/home.php');
+});

@@ -3,13 +3,16 @@
     <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide">
-            <img src="<?= $DATA['http_domain'] ?>public/img/login_background.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
             <img src="<?= $DATA['http_domain'] ?>public/img/slider1.png" alt="">
         </div>
         <div class="swiper-slide">
-            <img src="<?= $DATA['http_domain'] ?>public/img/logo2.png" alt="">
+            <img src="<?= $DATA['http_domain'] ?>public/img/slider2.png" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="<?= $DATA['http_domain'] ?>public/img/slider3.png" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="<?= $DATA['http_domain'] ?>public/img/slider4.png" alt="">
         </div>
     </div>
     <!-- If we need pagination -->
