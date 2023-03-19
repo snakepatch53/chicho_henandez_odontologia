@@ -73,6 +73,10 @@ header nav a.link {
     transition: all 0.2s ease;
     position: relative;
 }
+header nav a.link span {
+    font-family: Nunito-Regular;
+    font-size: 18px;
+}
 
 header nav a.link:before {
     position: absolute;
