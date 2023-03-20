@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/bootstrap.min.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/login.css">
     <link rel="shortcut icon" href="<?= $DATA['http_domain'] ?>public/img/logo1.png" type="image/x-icon">
-    <title>Login</title>
+    <title>Dr. Ayora's ⚙️ Login</title>
     <script>
         const http_domain = '<?= $DATA['http_domain'] ?>';
     </script>
