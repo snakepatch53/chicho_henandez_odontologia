@@ -15,7 +15,7 @@ if (Test-Path "C:\wamp\www") {
 }
 
 # Clonar el repositorio en la carpeta correspondiente
-if (Test-Path "" + $webRoot + "\" + $proyectName) {
+if (Test-Path "$webRoot\$proyectName") {
     Write-Host "Actualizanco cambios..." -ForegroundColor Green
     cd $webRoot
     git pull

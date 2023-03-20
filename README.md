@@ -52,11 +52,11 @@
 
 ## ⚙️ INSTALACION AUTOMATICA CON .BAT
 
-<a href="./src/assets/install_win.zip">Descargar archivo 📥</a>
+Ejecutalo con powershell
+<a href="./src/assets/install_win.rar">Descargar archivo 📥</a>
 
 ## 📄 VARIABLES DE ENTORNO
 
-Ejecutalo con powershell
 Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
 
 ```env
