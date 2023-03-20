@@ -52,7 +52,7 @@
 
 ## ⚙️ INSTALACION AUTOMATICA CON .BAT
 
-[Descargar archivo](./src/assets/install_win.rar)
+[Descargar archivo](./src/assets/install_win.zip)
 
 ## 📄 VARIABLES DE ENTORNO
 
