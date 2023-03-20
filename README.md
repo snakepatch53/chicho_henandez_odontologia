@@ -50,6 +50,10 @@
 
 # 📦 DOCUMENTACION DE INSTALACION
 
+## ⚙️ INSTALACION AUTOMATICA CON .BAT
+
+[Descargar archivo](./src/assets/install_win.bat)
+
 ## 📄 VARIABLES DE ENTORNO
 
 Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
