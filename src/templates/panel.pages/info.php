@@ -9,7 +9,7 @@
 <body>
     <?php include('./view/component.panel/header.php') ?>
     <?php include('./view/component.panel/sidebar.php') ?>
-    <main>
+    <main class="animate__animated animate__fadeIn">
         <div class="pt-4 px-md-5 px-1">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">

@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <main class='container-fluid'>
+    <main class='container-fluid animate__animated animate__fadeIn'>
         <div class="container">
             <div class="row justify-content-center align-items-center" style="height:100vh">
                 <div class="col-md-7 col-lg-5">

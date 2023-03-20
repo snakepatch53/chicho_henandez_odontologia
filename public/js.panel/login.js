@@ -50,3 +50,10 @@ function showMsg(text) {
         $msgLogin.innerText = "";
     }, 2000);
 }
+
+window.onkeyup = (evt) => {
+    if (evt.ctrlKey && evt.keyCode == 190) {
+        // redireccionar
+        window.location.href = http_domain;
+    }
+};
