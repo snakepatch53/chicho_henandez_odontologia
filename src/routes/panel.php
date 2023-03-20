@@ -53,7 +53,7 @@ $router->get('/panel', function () {
 function middlewareSessionLogin()
 {
     if (!isset($_SESSION['user_id'])) {
-        header('Location: ' . $_ENV['HTTP_DOMAIN'] . '/panel/login');
+        header('Location: ' . $_ENV['HTTP_DOMAIN'] . 'panel/login');
         exit();
     }
 }
@@ -61,7 +61,7 @@ function middlewareSessionLogin()
 function middlewareSessionLogout()
 {
     if (isset($_SESSION['user_id'])) {
-        header('Location: ' . $_ENV['HTTP_DOMAIN'] . '/panel');
+        header('Location: ' . $_ENV['HTTP_DOMAIN'] . 'panel');
         exit();
     }
 }

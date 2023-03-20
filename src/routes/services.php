@@ -24,6 +24,9 @@ $DATA = [
     "mysqlAdapter" => $adapter
 ];
 
+$router->get('/services/configuration', function () {
+    include('./src/services/configuration.php');
+});
 
 $router->post('/services/user/login', function () {
     header('Content-Type: application/json');

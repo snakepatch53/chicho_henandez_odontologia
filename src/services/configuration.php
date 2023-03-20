@@ -1,5 +1,4 @@
 <?php
-include("./src/dao/MysqlAdapter.php");
 $migration = new Migration(
     $_ENV['DB_HOST'],
     $_ENV['DB_USER'],
