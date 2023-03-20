@@ -3,7 +3,7 @@
 
 <head>
     <?php include('./src/templates/panel.component/head.php') ?>
-    <title><?= $DATA['title'] ?></title>
+    <title>Dr. Ayora's ⚙️ Panel <?= $DATA['title'] ?></title>
 </head>
 
 <body>

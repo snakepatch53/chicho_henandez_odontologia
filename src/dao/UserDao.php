@@ -30,7 +30,7 @@ class UserDao
         $this->mysqlAdapter = $mysqlAdapter;
     }
 
-    /**
+    /** Retorna una lista de usuarios
      * @return User[]
      */
     public function select(): array
@@ -50,5 +50,27 @@ class UserDao
             $users[] = $user;
         }
         return $users;
+    }
+    /** Retorna un usuario
+     * @param string $user_user
+     * @param string $user_pass
+     * @return User
+     */
+    public function login(string $user_user, string $user_pass): User | false
+    {
+        $resultset = ($this->mysqlAdapter)->query("SELECT * FROM users WHERE user_user = '$user_user' AND user_pass = '$user_pass'");
+        if ($row = mysqli_fetch_assoc($resultset)) {
+            $user = new User(
+                $row['user_id'],
+                $row['user_nombre'],
+                $row['user_user'],
+                $row['user_pass'],
+                $row['user_foto'],
+                $row['user_last'],
+                $row['user_created']
+            );
+            return $user;
+        }
+        return false;
     }
 }

@@ -3,7 +3,8 @@
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-
+ob_start();
+session_start();
 // definimos la zona horaria
 date_default_timezone_set('America/Guayaquil');
 // cargamos el autoload de composer
@@ -24,9 +25,9 @@ $dotenv->load();
 $router = new \Bramus\Router\Router();
 
 // declaramos las rutas
-// require __DIR__ . '/src/routes/services.php';
+require __DIR__ . '/src/routes/services.php';
 require __DIR__ . '/src/routes/public.php';
-// require __DIR__ . '/src/routes/panel.php';
+require __DIR__ . '/src/routes/panel.php';
 
 // iniciamos el router
 $router->run();

@@ -20,7 +20,6 @@ Crea la base de datos
 
 ```sql
   CREATE DATABASE {{YOUR_DB_NAME}};
-  USE {{YOUR_DB_NAME}};
 ```
 
 -   Asegurate de que el nombre de la base de datos sea el mismo que el que usas en el archivo .env

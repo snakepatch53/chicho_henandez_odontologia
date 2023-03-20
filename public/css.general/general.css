@@ -1,3 +1,13 @@
+@font-face {
+    src: url('./../font.general/Oregano-Regular.ttf');
+    font-family: Oregano-Regular;
+}
+
+@font-face {
+    src: url('./../font.general/Nunito-Regular.ttf');
+    font-family: Nunito-Regular;
+}
+
 * {
     --header-height: 45px;
     --sidebar-width: 250px;

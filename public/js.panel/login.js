@@ -29,10 +29,19 @@ function handleSubmit(event) {
     if (!user_user) return showMsg("Ingrese su usuario!");
     if (!user_pass) return showMsg("Ingrese su contraseña!");
     const formData = new FormData($formLogin);
-    fetch_query(formData, "user", "login").then((res) => {
-        if (res) return (location.href = $proyect.url + "panel");
-        showMsg("Credenciales incorrectos!");
-    });
+    try {
+        fetch_query(formData, "user", "login").then((res) => {
+            console.log(res);
+            try {
+                showMsg(res.message);
+                if (res.response) return (location.href = http_domain + "panel");
+            } catch (error) {
+                showMsg("Error al conectar con el servidor!");
+            }
+        });
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 function showMsg(text) {

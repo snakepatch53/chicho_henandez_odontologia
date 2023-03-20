@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/bootstrap.min.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/login.css">
-    <link rel="shortcut icon" href="<?= $DATA['http_domain'] ?>public/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= $DATA['http_domain'] ?>public/img/logo1.png" type="image/x-icon">
     <title>Login</title>
+    <script>
+        const http_domain = '<?= $DATA['http_domain'] ?>';
+    </script>
 </head>
 
 <body>
@@ -22,8 +25,8 @@
         <div class="container">
             <div class="row justify-content-center align-items-center" style="height:100vh">
                 <div class="col-md-7 col-lg-5">
-                    <div class="card">
-                        <div class="card-body p-5 login-container">
+                    <div class="card modal-form">
+                        <div class="card-body px-5 py-4 login-container">
                             <form class="needs-validation" id="element-loginform" onsubmit="return false" novalidate>
                                 <!-- form | ini -->
                                 <div class="row g-3">

@@ -22,7 +22,7 @@ CREATE TABLE users (
     user_nombre VARCHAR(50),
     user_user VARCHAR(50),
     user_pass VARCHAR(50),
-    user_foto VARCHAR(100),
+    user_foto VARCHAR(100) DEFAULT 'default.png',
     user_last VARCHAR(50),
     user_created VARCHAR(50)
 ) ENGINE INNODB;
