@@ -26,6 +26,8 @@ $DATA = [
 
 
 $router->post('/services/user/login', function () {
+    header('Content-Type: application/json');
+    header('Access-Control-Allow-Origin: *');
     if (isset(
         $_POST['user_user'],
         $_POST['user_pass']
@@ -59,8 +61,15 @@ $router->post('/services/user/login', function () {
     }
 });
 
-$router->get('/services/user/logout', function () {
+$router->post('/services/user/logout', function () {
+    header('Content-Type: application/json');
+    header('Access-Control-Allow-Origin: *');
     session_destroy();
-    header('Location: ' . $_ENV['HTTP_DOMAIN'] . '/panel/login');
+    echo json_encode([
+        'status' => 'success',
+        'message' => 'Sesión cerrada',
+        'response' => true,
+        'data' => null
+    ]);
     exit();
 });
