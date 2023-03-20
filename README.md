@@ -56,6 +56,7 @@
 
 ## 📄 VARIABLES DE ENTORNO
 
+Ejecutalo con powershell
 Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
 
 ```env
