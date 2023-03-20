@@ -15,11 +15,15 @@
 <p>
   🦷 La aplicación web ha sido diseñada específicamente para la Clínica Odontológica del Dr. David Ayora y el Dr. Claudio Ayora. Su propósito principal es proporcionar información sobre la clínica y sus servicios, además de ofrecer una funcionalidad especial para la gestión de citas médicas.
   <br>
+  <br>
   💻 La aplicación web ha sido desarrollada por Ideasoft utilizando diversas tecnologías, incluyendo PHP, HTML, JS, CSS, Apache y MySQL. Se ha creado un panel de administración para la gestión y actualización de la información de la página web de manera fácil e intuitiva.
+  <br>
   <br>
   📆 La funcionalidad de gestión de citas médicas permite a los pacientes solicitar citas en línea, lo que hace que el proceso sea más rápido y fácil. Los pacientes pueden seleccionar el tipo de tratamiento que necesitan, el día y la hora que les conviene, y recibir una confirmación inmediata de su cita.
   <br>
+  <br>
   🤝 La aplicación web es de código abierto y su uso es gratuito para cualquier persona o entidad que desee utilizarla. La aplicación puede ser modificada y distribuida libremente, siempre y cuando se reconozca a Ideasoft como el desarrollador original de la aplicación.
+  <br>
   <br>
   💯 En resumen, la aplicación web desarrollada por Ideasoft es una solución eficaz para la Clínica Odontológica del Dr. David Ayora y el Dr. Claudio Ayora, que permite a los pacientes solicitar citas médicas en línea de manera fácil y rápida. La aplicación web también cuenta con un panel de administración intuitivo que permite a los administradores actualizar y gestionar la información de la página web de manera sencilla. La aplicación es de código abierto y se puede utilizar, modificar y distribuir libremente bajo los términos y condiciones de la licencia.
 </p>
@@ -28,6 +32,7 @@
 
 <p>
   📝 Licencia de Código Abierto de la Aplicación Web desarrollada por Ideasoft para la Clínica Odontológica del Dr. David Ayora y el Dr. Claudio Ayora 🦷
+  <br>
   <br>
   Esta aplicación web es de código abierto y su uso está permitido a cualquier persona o entidad que desee utilizarla. Cualquier persona o entidad que desee utilizar esta aplicación web puede hacerlo de forma gratuita, sin limitaciones de uso, distribución o modificación, siempre y cuando se cumplan las siguientes condiciones:
   <br>
@@ -38,6 +43,7 @@
   </ol>
   <br>
   La aplicación web desarrollada por Ideasoft para la Clínica Odontológica del Dr. David Ayora y el Dr. Claudio Ayora se proporciona "tal cual" y sin garantías de ningún tipo, ya sean expresas o implícitas, incluidas, entre otras, las garantías de comercialización, adecuación para un propósito particular y no infracción de derechos de terceros. En ningún caso, Ideasoft será responsable por ningún daño directo, indirecto, incidental, especial o consecuencial que surja de, o en relación con, el uso o la incapacidad de utilizar esta aplicación web.
+  <br>
   <br>
   En resumen, esta aplicación web es de código abierto y puede ser utilizada y modificada libremente por cualquier persona o entidad. Ideasoft no ofrece garantías y no se hace responsable de ningún daño que pueda surgir del uso de esta aplicación web. Si decides utilizar esta aplicación web, aceptas los términos y condiciones de esta licencia. 🤗
 </p>
