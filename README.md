@@ -110,6 +110,12 @@ Crea el archivo <b><i>.htaccess</i></b> en la raiz del proyecto y configuralo
 
 ## 🚪 LOGIN
 
+Para abrir el login puedes presionar la combinacion de teclas <b><i>CTRL + .</i></b> o puedes ir a la siguiente ruta
+
+```http
+  {{YOUR_DOMAIN}}/panel/login
+```
+
 Para iniciar sesion por primera vez usa los siguientes credenciales
 
 ```txt
