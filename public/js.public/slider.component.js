@@ -1,4 +1,3 @@
-console.log("slider.component.js loaded");
 const swiper = new Swiper(".swiper", {
     speed: 400,
     allowTouchMove: true,

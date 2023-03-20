@@ -11,8 +11,9 @@ date_default_timezone_set('America/Guayaquil');
 require_once __DIR__ . '/vendor/autoload.php';
 
 // cargamos las funciones
-require_once __DIR__ . '/src/functions/RouterAdapter.php';
-require_once('./src/dao/MysqlAdapter.php');
+require_once(__DIR__ . '/src/functions/RouterAdapter.php');
+require_once(__DIR__ . '/src/dao/MysqlAdapter.php');
+require_once(__DIR__ . '/src/functions/middlewares.php');
 
 // cargamos los objetos de acceso a datos
 require_once('./src/dao/UserDao.php');

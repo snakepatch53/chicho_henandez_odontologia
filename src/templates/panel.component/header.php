@@ -18,7 +18,7 @@
                     <li>
                         <hr>
                     </li>
-                    <li><a class="btn btn-outline-primary p-1 mb-1" style="width:100%" href="#">Perfil</a></li>
+                    <!-- <li><a class="btn btn-outline-primary p-1 mb-1" style="width:100%" href="#">Perfil</a></li> -->
                     <li><button class="btn btn-outline-primary p-1 mb-1" style="width:100%" onclick="logout()">Cerrar sesion</button></li>
                 </ul>
             </li>

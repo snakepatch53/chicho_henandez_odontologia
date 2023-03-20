@@ -1,39 +1,26 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
-<br>
-<b><i>(martes, 14 de marzo de 2023)</i></b><br>
-🟢 diseño de pagina registro (clientes) <br>
-🟢 diseño de pagina login (clientes) <br>
-🟢 diseño de pagina de trabajos realizados (clientes) <br>
-<br>
-<b><i>(miércoles, 15 de marzo de 2023)</i></b><br>
-🟢 programacion de controlador pagina publica con javascript <br>
-<br>
-<b><i>(jueves, 16 de marzo de 2023)</i></b><br>
-🟢 reunion feedbacks <br>
-🟢 incorporacion de feedbacks <br>
-<br>
-<b><i>(viernes, 17 de marzo de 2023)</i></b><br>
+<b><i>(lunes, 20 de marzo de 2023)</i></b><br>
 🟢 diseño de base de datos sql <br>
-🟢 programacion de adaptador de acceso a datos <br>
-🟢 programacion de objetos de acceso a datos <br>
+🟢 programacion de objetos de acceso a datos DAO <br>
+🟢 programacion de servicios para cada DAO <br>
 <br>
-<b><i>(domingo, 19 de marzo de 2023)</i></b><br>
-🟢 diseño de pagina perfil de usuario (panel) <br>
+<b><i>(martes, 21 de marzo de 2023)</i></b><br>
+🟢 diseño de pagina inicio (administrador panel) <br>
 🟢 diseño de pagina informacion (administrador panel) <br>
 🟢 diseño de pagina slider (administrador panel) <br>
 <br>
-<b><i>(lunes, 20 de marzo de 2023)</i></b><br>
+<b><i>(miercoles, 22 de marzo de 2023)</i></b><br>
 🟢 diseño de pagina usuarios (administrador panel) <br>
 🟢 diseño de pagina clientes (administrador panel) <br>
 🟢 diseño de pagina servicios (administrador panel) <br>
 <br>
-<b><i>(martes, 21 de marzo de 2023)</i></b><br>
+<b><i>(jueves, 23 de marzo de 2023)</i></b><br>
 🟢 diseño de pagina citas (administrador panel) <br>
-🟢 control de sesiones <br>
 🟢 presentacion de desde la base de datos en todas las interfaces <br>
+🟢 programacion de controlador pagina publica con javascript <br>
 <br>
-<b><i>(miércoles, 22 de marzo de 2023)</i></b><br>
+<b><i>(viernes, 24 de marzo de 2023)</i></b><br>
 🟢 reunion de presentacion <br>
 🟢 ultimos detalles <br>
 🟢<br>
@@ -42,21 +29,14 @@
 # 🔴 COSAS QUE ESTOY HACIENDO 🔴
 
 <b><i>(Lunes, 13 de marzo de 2023)</i></b><br>
-🔴 diseño de pagina informacion (administrador panel) <br>
+🔴 diseño de pagina inicio (administrador panel) <br>
 🔴<br>
 🔴<br>
 
 # ❌ ERRORES QUE TENGO QUE SOLUCIONAR ❌
 
-<b><i>(Lunes, 13 de marzo de 2023)</i></b><br>
-
-### ❌ Error no sintactico en el archivo _src/functions/RouterAdapter.php_ en el metodo _getHTML_: <br>
-
--   No lee las rutas correctamente.
--   Lo que he podido determinar es que el Bramus/Router funciona correctamente, pero cuando registro las rutas a traves
-    de la clase RouterAdapter, no las lee correctamente y se salta las rutas anidadas para leer siempre la ultima.<br>
-    ❌<br>
-    ❌<br>
+❌<br>
+❌<br>
 
 # ✅ COSAS REALIZADAS ✅
 
@@ -86,4 +66,12 @@
 <b><i>(Sabado, 18 de marzo de 2023)</i></b><br>
 ✅ diseño de pagina contactos (clientes) <br>
 ✅ diseño de pagina citas (clientes) <br>
+✅ reunion feedbacks <br>
+✅ incorporacion de feedbacks <br>
+<b><i>(Domingo, 19 de marzo de 2023)</i></b><br>
+✅ diseño de pagina login (clientes) <br>
+✅ control de sesiones <br>
+✅ Solucione el error ✖️ con el adaptador de rutas<br>
+✅ programacion de adaptador de acceso a datos <br>
+✅<br>
 ✅<br>
