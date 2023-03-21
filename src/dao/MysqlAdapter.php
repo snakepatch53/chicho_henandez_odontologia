@@ -35,7 +35,7 @@ class MysqlAdapter
             $this->name,
             $this->port
         );
-        mysqli_set_charset($this->conn, "utf8");
+        // mysqli_set_charset($this->conn, "utf8");
         return $this->conn;
     }
 
