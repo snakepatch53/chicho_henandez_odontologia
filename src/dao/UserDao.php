@@ -51,6 +51,29 @@ class UserDao
         }
         return $users;
     }
+
+    /** Retorna una lista de doctores
+     * @return User[]
+     */
+    public function selectDoctores(): array
+    {
+        $users = [];
+        $resultset = ($this->mysqlAdapter)->query("SELECT * FROM users WHERE user_tipo = 'doctor'");
+        while ($row = mysqli_fetch_assoc($resultset)) {
+            $user = new User(
+                $row['user_id'],
+                $row['user_nombre'],
+                $row['user_user'],
+                $row['user_pass'],
+                $row['user_foto'],
+                $row['user_last'],
+                $row['user_created']
+            );
+            $users[] = $user;
+        }
+        return $users;
+    }
+
     /** Retorna un usuario
      * @param string $user_user
      * @param string $user_pass

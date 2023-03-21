@@ -7,4 +7,4 @@ $migration = new Migration(
     $_ENV['DB_PORT']
 );
 
-$migration->migrateFromSqlFile("./db.sql");
+$migration->migrateFromSqlFile("./src/assets/db.sql");

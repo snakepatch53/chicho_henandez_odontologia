@@ -7,7 +7,48 @@ $radapter = new RAdapter($router, $_TEMPLATE_PUBLIC_PATH, $_ENV['HTTP_DOMAIN']);
  * ? El error a quedado solucionado
  */
 // HOME
-$radapter->getHTML('/', 'home', fn () => middlewareSessionLogout());
-$radapter->getHTML('/contactos', 'contactos', fn () => middlewareSessionLogout());
-$radapter->getHTML('/nosotros', 'nosotros', fn () => middlewareSessionLogout());
-$radapter->getHTML('/citas', 'citas', fn () => middlewareSessionLogout());
+$radapter->getHTML('/', 'home', fn () => middlewareSessionLogout(), function ($DATA) {
+    $info = (new InfoDao($DATA['mysqlAdapter']))->select();
+    $slider = (new SliderDao($DATA['mysqlAdapter']))->select();
+    $social = (new SocialDao($DATA['mysqlAdapter']))->select();
+    $servicios = (new ServicioDao($DATA['mysqlAdapter']))->selectLimit(4);
+    return [
+        'info' => $info,
+        'slider' => $slider,
+        'social' => $social,
+        'servicios' => $servicios
+    ];
+});
+
+$radapter->getHTML('/contactos', 'contactos', fn () => middlewareSessionLogout(), function ($DATA) {
+    $info = (new InfoDao($DATA['mysqlAdapter']))->select();
+    $social = (new SocialDao($DATA['mysqlAdapter']))->select();
+    return [
+        'info' => $info,
+        'social' => $social
+    ];
+});
+
+$radapter->getHTML('/nosotros', 'nosotros', fn () => middlewareSessionLogout(), function ($DATA) {
+    $info = (new InfoDao($DATA['mysqlAdapter']))->select();
+    $social = (new SocialDao($DATA['mysqlAdapter']))->select();
+    return [
+        'info' => $info,
+        'social' => $social
+    ];
+});
+
+$radapter->getHTML('/citas', 'citas', fn () => middlewareSessionLogout(), function ($DATA) {
+    $info = (new InfoDao($DATA['mysqlAdapter']))->select();
+    $social = (new SocialDao($DATA['mysqlAdapter']))->select();
+    $doctores = (new UserDao($DATA['mysqlAdapter']))->selectDoctores();
+    $horas = (new HoraDao($DATA['mysqlAdapter']))->select();
+    $servicios = (new ServicioDao($DATA['mysqlAdapter']))->select();
+    return [
+        'info' => $info,
+        'social' => $social,
+        'doctores' => $doctores,
+        'horas' => $horas,
+        'servicios' => $servicios
+    ];
+});

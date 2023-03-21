@@ -16,7 +16,12 @@ require_once(__DIR__ . '/src/dao/MysqlAdapter.php');
 require_once(__DIR__ . '/src/functions/middlewares.php');
 
 // cargamos los objetos de acceso a datos
+require_once('./src/dao/InfoDao.php');
+require_once('./src/dao/SocialDao.php');
+require_once('./src/dao/ServicioDao.php');
+require_once('./src/dao/SliderDao.php');
 require_once('./src/dao/UserDao.php');
+require_once('./src/dao/HoraDao.php');
 
 // cargamos las variables de entorno
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);

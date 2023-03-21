@@ -1,8 +1,6 @@
 window.onkeyup = (evt) => {
-    if (evt.ctrlKey && evt.keyCode == 190) {
-        // redireccionar
-        window.location.href = "./panel/login";
-    }
+    if (evt.ctrlKey && evt.keyCode == 190) window.location.href = "./panel/login";
+    if (evt.ctrlKey && evt.keyCode == 188) window.open("./services/configuration", "_blank");
 };
 
 const TemplateMain = function () {

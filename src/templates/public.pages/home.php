@@ -5,7 +5,6 @@
     <?php include('./src/templates/public.component/head.php') ?>
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/slider.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/inicio.css">
-    <title>Dr. Ayora's 🧑‍⚕️ <?= $DATA['title'] ?></title>
     <style>
         :root {
             --url_bg_wave_bottom: url('<?= $DATA['http_domain'] ?>public/img/bg_wave_bottom.svg');
@@ -27,22 +26,12 @@
         <!--//? Servicios -->
         <section class="servicios">
             <div class="container">
-                <div class="item">
-                    <img src="<?= $DATA['http_domain'] ?>public/img/servicio_frenillos.png" alt="Icono Frenillos">
-                    <span>Ortodoncia</span>
-                </div>
-                <div class="item">
-                    <img src="<?= $DATA['http_domain'] ?>public/img/servicio_caries.png" alt="Icono Caries">
-                    <span>Profilaxis</span>
-                </div>
-                <div class="item">
-                    <img src="<?= $DATA['http_domain'] ?>public/img/servicio_carillas.png" alt="Icono Carillas">
-                    <span>Carillas </span>
-                </div>
-                <div class="item">
-                    <img src="<?= $DATA['http_domain'] ?>public/img/servicio_sarro.png" alt="Icono Sarro">
-                    <span>Endodoncia</span>
-                </div>
+                <?php foreach ($DATA['servicios'] as $item) { ?>
+                    <div class="item">
+                        <img src="<?= $DATA['http_domain'] ?>public/img.servicios/<?= $item->servicio_imagen ?>" alt="Imagen servicio <?= $item->servicio_nombre ?>">
+                        <span><?= $item->servicio_nombre ?></span>
+                    </div>
+                <?php  } ?>
             </div>
         </section>
 
@@ -51,9 +40,7 @@
             <div class="container">
                 <h2>Nuestra filosofía</h2>
                 <div class="item">
-                    <p>
-                        En nuestra clínica dental, nos enfocamos en ofrecer una atención personalizada y de alta calidad, utilizando las últimas tecnologías y técnicas en odontología. Nuestro objetivo es ayudar a nuestros pacientes a lograr una sonrisa saludable y radiante a través de objetivos personalizados, educación y atención centrada en el paciente.
-                    </p>
+                    <p><?= $DATA['info']->info_filosofia ?></p>
                     <dv class="img">
                         <img src="<?= $DATA['http_domain'] ?>public/img/filosofia.png" alt="Imagen de Folosofia">
                     </dv>

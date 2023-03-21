@@ -2,18 +2,11 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide">
-            <img src="<?= $DATA['http_domain'] ?>public/img/slider1.png" alt="">
-        </div>
-        <div class="swiper-slide">
-            <img src="<?= $DATA['http_domain'] ?>public/img/slider2.png" alt="">
-        </div>
-        <div class="swiper-slide">
-            <img src="<?= $DATA['http_domain'] ?>public/img/slider3.png" alt="">
-        </div>
-        <div class="swiper-slide">
-            <img src="<?= $DATA['http_domain'] ?>public/img/slider4.png" alt="">
-        </div>
+        <?php foreach ($DATA['slider'] as $item) { ?>
+            <div class="swiper-slide">
+                <img src="<?= $DATA['http_domain'] ?>public/img.slider/<?= $item->slider_imagen ?>" alt="Imagen <?= $item->slide_id ?> del slider">
+            </div>
+        <?php } ?>
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>

@@ -4,15 +4,21 @@
             <img src="<?= $DATA['http_domain'] ?>public/img/logo2.png" alt="logo">
         </a>
         <div class="info">
-            <h1>Consultorio dental del Dr. Claudio Ayora C</h1>
-            <p>Domingo comin y kiruba Sucua - Morona Santiago</p>
-            <p>0986719637 - 0986137316</p>
-            <p>infor@dental.com</p>
+            <h1>Consultorio dental <?= $DATA['info']->info_nombre ?></h1>
+            <p><?= $DATA['info']->info_direccion ?> - <?= $DATA['info']->info_ciudad ?></p>
+            <p><?= $DATA['info']->info_celular ?> - <?= $DATA['info']->info_telefono ?></p>
+            <p><?= $DATA['info']->info_email ?></p>
         </div>
         <div class="social">
             <h2>Nuestras Redes</h2>
             <div class="social-icons">
-                <a class="wht" target="_blank" href="#">
+                <?php
+                foreach ($DATA['social'] as $item) { ?>
+                    <a target="_blank" href="<?= $item->social_url ?>" style="color:<?= $item->social_color ?>; border: solid 1px <?= $item->social_color ?>">
+                        <?= $item->social_icon ?>
+                    </a>
+                <?php } ?>
+                <!-- <a class="wht" target="_blank" href="#">
                     <i class="fab fa-whatsapp"></i>
                 </a>
                 <a class="fb" target="_blank" href="#">
@@ -20,11 +26,11 @@
                 </a>
                 <a class="ins" target="_blank" href="#">
                     <i class="fab fa-instagram"></i>
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
 </section>
 <section class="row copy">
-    <p class="copy">Dr. Claudio Ayora © <?= date('Y') ?> Todos los derechos reservados.</p>
+    <p class="copy"><?= $DATA['info']->info_nombre ?> © <?= date('Y') ?> Todos los derechos reservados.</p>
 </section>

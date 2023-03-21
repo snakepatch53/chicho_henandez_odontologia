@@ -69,6 +69,7 @@ section.form .container form#citaform-cliente .row .input {
     font-family: Nunito-Regular;
     background: rgba(179, 207, 232, 0.59);
     padding: 10px;
+    border-radius: 5px;
 }
 
 section.form .container form#citaform-cliente .row .input input {
@@ -178,6 +179,8 @@ section.form .container button:hover {
     color: #46c071;
     border: solid 1px #46c071;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    background: #fff;
     transition: all 0.2s ease;
 }
 
@@ -247,6 +250,7 @@ section.servicios ul li p {
     color: #213e6e;
     font-family: Nunito-Regular;
     text-align: justify;
+    user-select: text;
 }
 
 

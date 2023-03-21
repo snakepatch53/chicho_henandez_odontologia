@@ -1,8 +1,6 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
 <b><i>(lunes, 20 de marzo de 2023)</i></b><br>
-🟢 diseño de base de datos sql <br>
-🟢 programacion de objetos de acceso a datos DAO <br>
 🟢 programacion de servicios para cada DAO <br>
 <br>
 <b><i>(martes, 21 de marzo de 2023)</i></b><br>
@@ -30,6 +28,8 @@
 
 <b><i>(Lunes, 13 de marzo de 2023)</i></b><br>
 🔴 diseño de pagina inicio (administrador panel) <br>
+<b><i>(Lunes, 20 de marzo de 2023)</i></b><br>
+🔴 programacion de objetos de acceso a datos DAO <br>
 🔴<br>
 🔴<br>
 
@@ -73,5 +73,7 @@
 ✅ control de sesiones <br>
 ✅ Solucione el error ✖️ con el adaptador de rutas<br>
 ✅ programacion de adaptador de acceso a datos <br>
+<b><i>(Lunes, 20 de marzo de 2023)</i></b><br>
+✅ diseño de base de datos sql <br>
 ✅<br>
 ✅<br>
