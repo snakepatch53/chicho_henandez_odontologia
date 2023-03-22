@@ -8,4 +8,4 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/general.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/header.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/footer.css">
-<title><?= $DATA['info']->info_nombre ?> 🧑‍⚕️ <?= $DATA['title'] ?></title>
+<title><?= $DATA['info']['info_nombre'] ?> 🧑‍⚕️ <?= $DATA['title'] ?></title>

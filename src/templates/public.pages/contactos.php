@@ -57,7 +57,7 @@
                 </form>
             </div>
         </section>
-        <section class="contact-map"><?= $DATA['info']->info_mapa; ?></section>
+        <section class="contact-map"><?= $DATA['info']['info_mapa']; ?></section>
     </main>
 
     <footer id="section-footer">

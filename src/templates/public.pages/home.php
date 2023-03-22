@@ -40,7 +40,7 @@
             <div class="container">
                 <h2>Nuestra filosofía</h2>
                 <div class="item">
-                    <p><?= $DATA['info']->info_filosofia ?></p>
+                    <p><?= $DATA['info']['info_filosofia'] ?></p>
                     <dv class="img">
                         <img src="<?= $DATA['http_domain'] ?>public/img/filosofia.png" alt="Imagen de Folosofia">
                     </dv>

@@ -17,12 +17,6 @@ class SliderService
         echo json_encode($result);
     }
 
-    // slider_id
-    // slider_titulo
-    // slider_imagen
-    // slider_last
-    // slider_created
-
     public static function insert($DATA)
     {
         header('Content-Type: application/json');

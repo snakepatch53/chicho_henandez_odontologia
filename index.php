@@ -26,10 +26,12 @@ require_once('./src/dao/UserDao.php');
 require_once('./src/dao/HoraDao.php');
 
 // cargamos los servicios para el web service
+require_once('./src/services/info.service.php');
 require_once('./src/services/user.service.php');
 require_once('./src/services/servicio.service.php');
 require_once('./src/services/hora.service.php');
 require_once('./src/services/slider.service.php');
+require_once('./src/services/social.service.php');
 
 // cargamos las variables de entorno
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);

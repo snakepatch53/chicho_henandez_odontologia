@@ -1,34 +1,4 @@
 <?php
-
-class Social
-{
-    public string $social_id = "";
-    public string $social_nombre = "";
-    public string $social_url = "";
-    public string $social_icon = "";
-    public string $social_color = "";
-    public string $social_last = "";
-    public string $social_created = "";
-    public function __construct(
-        string $social_id,
-        string $social_nombre,
-        string $social_url,
-        string $social_icon,
-        string $social_color,
-        string $social_last,
-        string $social_created
-    ) {
-        $this->social_id = $social_id;
-        $this->social_nombre = $social_nombre;
-        $this->social_url = $social_url;
-        $this->social_icon = $social_icon;
-        $this->social_color = $social_color;
-        $this->social_last = $social_last;
-        $this->social_created = $social_created;
-    }
-}
-
-
 class SocialDao
 {
     private MysqlAdapter $mysqlAdapter;
@@ -53,17 +23,72 @@ class SocialDao
             if (strpos($color, '#') === false) {
                 $color = '#' . $color;
             }
-            $social = new Social(
-                $row['social_id'],
-                $row['social_nombre'],
-                $row['social_url'],
-                $icon,
-                $color,
-                $row['social_last'],
-                $row['social_created']
-            );
-            $socials[] = $social;
+            $row['social_icon'] = $icon;
+            $row['social_color'] = $color;
+            $socials[] = $row;
         }
         return $socials;
+    }
+
+    public function selectById($id)
+    {
+        $resultset = ($this->mysqlAdapter)->query("SELECT * FROM social WHERE social_id = $id");
+        $social = mysqli_fetch_assoc($resultset);
+        $icon = $social['social_icon'];
+        if (strpos($icon, '<i') === false) {
+            $icon = '<i class="' . $icon . '" i></i>';
+        }
+        $color = $social['social_color'];
+        if (strpos($color, '#') === false) {
+            $color = '#' . $color;
+        }
+        $social['social_icon'] = $icon;
+        $social['social_color'] = $color;
+        return $social;
+    }
+
+    public function insert(
+        string $social_nombre,
+        string $social_url,
+        string $social_icon,
+        string $social_color
+    ): int | bool {
+        $social_last = date('Y-m-d H:i:s');
+        $social_created = date('Y-m-d H:i:s');
+        $resultset = ($this->mysqlAdapter)->query("
+            INSERT INTO 
+                social (social_nombre, social_url, social_icon, social_color, social_last, social_created) 
+                VALUES ('$social_nombre', '$social_url', '$social_icon', '$social_color', '$social_last', '$social_created')
+        ");
+        if (!$resultset) return false;
+        return $this->mysqlAdapter->getLastId();
+    }
+
+    public function update(
+        int $social_id,
+        string $social_nombre,
+        string $social_url,
+        string $social_icon,
+        string $social_color
+    ): bool {
+        $social_last = date('Y-m-d H:i:s');
+        $resultset = ($this->mysqlAdapter)->query("
+            UPDATE social SET 
+                social_nombre = '$social_nombre',
+                social_url = '$social_url',
+                social_icon = '$social_icon',
+                social_color = '$social_color',
+                social_last = '$social_last'
+            WHERE social_id = $social_id
+        ");
+        if (!$resultset) return false;
+        return true;
+    }
+
+    public function delete(int $social_id): bool
+    {
+        $resultset = ($this->mysqlAdapter)->query("DELETE FROM social WHERE social_id = $social_id");
+        if (!$resultset) return false;
+        return true;
     }
 }

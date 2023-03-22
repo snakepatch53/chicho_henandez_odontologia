@@ -16,19 +16,19 @@
         <section class="historia">
             <div class="container">
                 <h2>Sobre Nosotros</h2>
-                <p><?= $DATA['info']->info_resumen ?></p>
+                <p><?= $DATA['info']['info_resumen'] ?></p>
             </div>
         </section>
         <section class="mision">
             <div class="container">
                 <h3>Misión</h3>
-                <p><?= $DATA['info']->info_mision ?></p>
+                <p><?= $DATA['info']['info_mision'] ?></p>
             </div>
         </section>
         <section class="vision">
             <div class="container">
                 <h3>Visión</h3>
-                <p><?= $DATA['info']->info_vision ?></p>
+                <p><?= $DATA['info']['info_vision'] ?></p>
             </div>
         </section>
         <br><br><br><br><br>
