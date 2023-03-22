@@ -60,21 +60,21 @@
                         <select name="doctor" id="doctor">
                             <option value="">Seleccione una opcion</option>
                             <?php foreach ($DATA['doctores'] as $item) { ?>
-                                <option value="<?= $item->user_id ?>">Dr. <?= $item->user_nombre ?></option>
+                                <option value="<?= $item['user_id'] ?>">Dr. <?= $item['user_nombre'] ?></option>
                             <?php } ?>
                         </select>
                         <label for="hora">Elegir una hora: </label>
                         <select name="hora" id="hora">
                             <option value="">Seleccione una opcion</option>
                             <?php foreach ($DATA['horas'] as $item) { ?>
-                                <option value="<?= $item->hora_id ?>"><?= $item->hora_hora ?></option>
+                                <option value="<?= $item['hora_id'] ?>"><?= $item['hora_hora'] ?></option>
                             <?php } ?>
                         </select>
                         <label for="especialidad">Elegir una especialidad: </label>
                         <select name="especialidad" id="especialidad">
                             <option value="">Seleccione una opcion</option>
                             <?php foreach ($DATA['servicios'] as $item) { ?>
-                                <option value="<?= $item->servicio_id ?>"><?= $item->servicio_nombre ?></option>
+                                <option value="<?= $item['servicio_id'] ?>"><?= $item['servicio_nombre'] ?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -91,9 +91,9 @@
                 <ul>
                     <?php foreach ($DATA['servicios'] as $item) { ?>
                         <li>
-                            <img src="<?= $DATA['http_domain'] ?>public/img.servicios/<?= $item->servicio_imagen ?>" alt="Imagen de Servicio <?= $item->servicio_nombre ?>">
-                            <h3><?= $item->servicio_nombre ?></h3>
-                            <p><?= $item->servicio_descripcion ?></p>
+                            <img src="<?= $DATA['http_domain'] ?>public/img.servicios/<?= $item['servicio_imagen'] ?>" alt="Imagen de Servicio <?= $item['servicio_nombre'] ?>">
+                            <h3><?= $item['servicio_nombre'] ?></h3>
+                            <p><?= $item['servicio_descripcion'] ?></p>
                         </li>
                     <?php } ?>
                 </ul>

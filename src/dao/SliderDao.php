@@ -1,28 +1,5 @@
 <?php
 
-class Slider
-{
-    public string $slider_id = "";
-    public string $slider_titulo = "";
-    public string $slider_imagen = "";
-    public string $slider_last = "";
-    public string $slider_created = "";
-    public function __construct(
-        string $slider_id,
-        string $slider_titulo,
-        string $slider_imagen,
-        string $slider_last,
-        string $slider_created
-    ) {
-        $this->slider_id = $slider_id;
-        $this->slider_titulo = $slider_titulo;
-        $this->slider_imagen = $slider_imagen;
-        $this->slider_last = $slider_last;
-        $this->slider_created = $slider_created;
-    }
-}
-
-
 class SliderDao
 {
     private MysqlAdapter $mysqlAdapter;
@@ -30,24 +7,59 @@ class SliderDao
     {
         $this->mysqlAdapter = $mysqlAdapter;
     }
-
-    /** Retorna una lista de imagenes para el slider
-     * @return Slider[]
-     */
     public function select(): array
     {
         $resultset = ($this->mysqlAdapter)->query("SELECT * FROM slider");
         $sliders = [];
         while ($row = mysqli_fetch_assoc($resultset)) {
-            $slider = new Slider(
-                $row['slider_id'],
-                $row['slider_titulo'],
-                $row['slider_imagen'],
-                $row['slider_last'],
-                $row['slider_created']
-            );
-            $sliders[] = $slider;
+            $sliders[] = $row;
         }
         return $sliders;
+    }
+
+    public function selectById(int $slider_id)
+    {
+        $resultset = ($this->mysqlAdapter)->query("SELECT * FROM slider WHERE slider_id = $slider_id");
+        $row = mysqli_fetch_assoc($resultset);
+        return $row;
+    }
+
+    public function insert(
+        string $slider_titulo,
+        string $slider_imagen
+    ): int | bool {
+        $slider_last = date('Y-m-d H:i:s');
+        $slider_created = date('Y-m-d H:i:s');
+        $resultset = ($this->mysqlAdapter)->query("
+            INSERT INTO 
+                slider (slider_titulo, slider_imagen, slider_last, slider_created) 
+                VALUES ('$slider_titulo', '$slider_imagen', '$slider_last', '$slider_created')
+        ");
+        if (!$resultset) return false;
+        return $this->mysqlAdapter->getLastId();
+    }
+
+    public function update(
+        int $slider_id,
+        string $slider_titulo,
+        string $slider_imagen
+    ): bool {
+        $slider_last = date('Y-m-d H:i:s');
+        $resultset = ($this->mysqlAdapter)->query("
+            UPDATE slider SET 
+                slider_titulo = '$slider_titulo',
+                slider_imagen = '$slider_imagen',
+                slider_last = '$slider_last'
+            WHERE slider_id = $slider_id
+        ");
+        if (!$resultset) return false;
+        return true;
+    }
+
+    public function delete(int $slider_id): bool
+    {
+        $resultset = ($this->mysqlAdapter)->query("DELETE FROM slider WHERE slider_id = $slider_id");
+        if (!$resultset) return false;
+        return true;
     }
 }

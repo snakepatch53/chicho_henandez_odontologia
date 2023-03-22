@@ -28,8 +28,8 @@
             <div class="container">
                 <?php foreach ($DATA['servicios'] as $item) { ?>
                     <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img.servicios/<?= $item->servicio_imagen ?>" alt="Imagen servicio <?= $item->servicio_nombre ?>">
-                        <span><?= $item->servicio_nombre ?></span>
+                        <img src="<?= $DATA['http_domain'] ?>public/img.servicios/<?= $item['servicio_imagen'] ?>" alt="Imagen servicio <?= $item['servicio_nombre'] ?>">
+                        <span><?= $item['servicio_nombre'] ?></span>
                     </div>
                 <?php  } ?>
             </div>
@@ -46,16 +46,13 @@
                     </dv>
                 </div>
                 <div class="doctores">
-                    <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img/doctor1.png" alt="Foto del Doctor">
-                        <b>Dr. Claudio Ayora</b>
-                        <span>Especialista en odontologia</span>
-                    </div>
-                    <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img/doctor2.png" alt="Foto del Doctor">
-                        <b>Dr. David Ayora</b>
-                        <span>Especialista en odontologia</span>
-                    </div>
+                    <?php foreach ($DATA['doctores'] as $item) { ?>
+                        <div class="item">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.users/<?= $item['user_foto'] ?>" alt="Foto del Doctor <?= $item['user_nombre'] ?>">
+                            <b>Dr. <?= $item['user_nombre'] ?></b>
+                            <span><?= $item['user_especialidad'] ?></span>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>

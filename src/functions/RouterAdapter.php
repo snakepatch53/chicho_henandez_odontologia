@@ -55,6 +55,38 @@ class RAdapter
             }
         });
     }
+    public function post(String $selector, $callback = null, $middleware = null)
+    {
+        $this->router->post($selector, function (...$args) use ($callback, $middleware) {
+            $path = $this->path;
+            $http_domain = $this->http_domain;
+            $DATA = [
+                "path" => $path,
+                "http_domain" => $http_domain,
+                "mysqlAdapter" => new MysqlAdapter(
+                    $_ENV['DB_HOST'],
+                    $_ENV['DB_USER'],
+                    $_ENV['DB_PASS'],
+                    $_ENV['DB_NAME'],
+                    $_ENV['DB_PORT']
+                ),
+            ];
+
+            // Comprobar si se envio un callback
+            if ($callback) {
+                $callback_respponse = $callback($DATA, ...$args);
+                // Comprobar si el callback devuelve un array para unirlo al array DATA
+                if (is_array($callback_respponse)) $DATA = array_merge($DATA, $callback_respponse);
+            }
+
+            // Comprobar si se envio un middleware
+            if ($middleware) {
+                $middleware_respponse = $middleware($DATA, ...$args);
+                // Comprobar si el middleware devuelve un array para unirlo al array DATA
+                if (is_array($middleware_respponse)) $DATA = array_merge($DATA, $middleware_respponse);
+            }
+        });
+    }
     public function getRouter()
     {
         return $this->router;

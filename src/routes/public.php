@@ -12,11 +12,13 @@ $radapter->getHTML('/', 'home', fn () => middlewareSessionLogout(), function ($D
     $slider = (new SliderDao($DATA['mysqlAdapter']))->select();
     $social = (new SocialDao($DATA['mysqlAdapter']))->select();
     $servicios = (new ServicioDao($DATA['mysqlAdapter']))->selectLimit(4);
+    $doctores = (new UserDao($DATA['mysqlAdapter']))->selectDoctoresLimit(2);
     return [
         'info' => $info,
         'slider' => $slider,
         'social' => $social,
-        'servicios' => $servicios
+        'servicios' => $servicios,
+        'doctores' => $doctores
     ];
 });
 

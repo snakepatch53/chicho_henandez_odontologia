@@ -4,7 +4,7 @@
         <!-- Slides -->
         <?php foreach ($DATA['slider'] as $item) { ?>
             <div class="swiper-slide">
-                <img src="<?= $DATA['http_domain'] ?>public/img.slider/<?= $item->slider_imagen ?>" alt="Imagen <?= $item->slide_id ?> del slider">
+                <img src="<?= $DATA['http_domain'] ?>public/img.slider/<?= $item['slider_imagen'] ?>" alt="Imagen <?= $item['slide_id'] ?> del slider">
             </div>
         <?php } ?>
     </div>

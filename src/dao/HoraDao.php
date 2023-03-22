@@ -1,25 +1,4 @@
 <?php
-
-class Hora
-{
-    public string $hora_id = "";
-    public string $hora_hora = "";
-    public string $hora_last = "";
-    public string $hora_created = "";
-    public function __construct(
-        string $hora_id,
-        string $hora_hora,
-        string $hora_last,
-        string $hora_created
-    ) {
-        $this->hora_id = $hora_id;
-        $this->hora_hora = $hora_hora;
-        $this->hora_last = $hora_last;
-        $this->hora_created = $hora_created;
-    }
-}
-
-
 class HoraDao
 {
     private MysqlAdapter $mysqlAdapter;
@@ -36,14 +15,48 @@ class HoraDao
         $resultset = ($this->mysqlAdapter)->query("SELECT * FROM horas");
         $horas = [];
         while ($row = mysqli_fetch_assoc($resultset)) {
-            $hora = new hora(
-                $row['hora_id'],
-                $row['hora_hora'],
-                $row['hora_last'],
-                $row['hora_created']
-            );
-            $horas[] = $hora;
+            $horas[] = $row;
         }
         return $horas;
+    }
+
+    public function selectById(int $hora_id)
+    {
+        $resultset = ($this->mysqlAdapter)->query("SELECT * FROM horas WHERE hora_id = $hora_id");
+        $row = mysqli_fetch_assoc($resultset);
+        return $row;
+    }
+
+    public function insert(string $hora_hora): int | bool
+    {
+        $hora_last = date('Y-m-d H:i:s');
+        $hora_created = date('Y-m-d H:i:s');
+        $resultset = ($this->mysqlAdapter)->query("
+            INSERT INTO 
+                horas (hora_hora, hora_last, hora_created) 
+                VALUES ('$hora_hora', '$hora_last', '$hora_created')
+        ");
+        if (!$resultset) return false;
+        return $this->mysqlAdapter->getLastId();
+    }
+
+    public function update(int $hora_id, string $hora_hora): bool
+    {
+        $hora_last = date('Y-m-d H:i:s');
+        $resultset = ($this->mysqlAdapter)->query("
+            UPDATE horas SET 
+                hora_hora = '$hora_hora',
+                hora_last = '$hora_last'
+            WHERE hora_id = $hora_id
+        ");
+        if (!$resultset) return false;
+        return true;
+    }
+
+    public function delete(int $hora_id): bool
+    {
+        $resultset = ($this->mysqlAdapter)->query("DELETE FROM horas WHERE hora_id = $hora_id");
+        if (!$resultset) return false;
+        return true;
     }
 }
