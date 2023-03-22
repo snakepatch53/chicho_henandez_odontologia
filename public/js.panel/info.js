@@ -56,11 +56,13 @@ const handleFunction = {
 const crudFunction = {
     select: async function () {
         await fetch_query(null, "info", "select").then((res) => {
-            uiFunction.refresh(res);
+            console.log(res);
+            uiFunction.refresh(res.data);
         });
     },
     update: function () {
         const formData = new FormData($form);
+        // print formdata
         fetch_query(formData, "info", "update").then((res) => {
             console.log(res);
             uiFunction.refresh(res);

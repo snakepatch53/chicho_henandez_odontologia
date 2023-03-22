@@ -91,7 +91,7 @@
                 <ul>
                     <?php foreach ($DATA['servicios'] as $item) { ?>
                         <li>
-                            <img src="<?= $DATA['http_domain'] ?>public/img.servicios/<?= $item['servicio_imagen'] ?>" alt="Imagen de Servicio <?= $item['servicio_nombre'] ?>">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.servicios/<?= $item['servicio_imagen'] ?>?last=<?= $item['servicio_last'] ?>" alt="Imagen de Servicio <?= $item['servicio_nombre'] ?>">
                             <h3><?= $item['servicio_nombre'] ?></h3>
                             <p><?= $item['servicio_descripcion'] ?></p>
                         </li>

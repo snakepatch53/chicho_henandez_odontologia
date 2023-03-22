@@ -28,7 +28,7 @@
             <div class="container">
                 <?php foreach ($DATA['servicios'] as $item) { ?>
                     <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img.servicios/<?= $item['servicio_imagen'] ?>" alt="Imagen servicio <?= $item['servicio_nombre'] ?>">
+                        <img src="<?= $DATA['http_domain'] ?>public/img.servicios/<?= $item['servicio_imagen'] ?>?last=<?= $item['servicio_last'] ?>" alt="Imagen servicio <?= $item['servicio_nombre'] ?>">
                         <span><?= $item['servicio_nombre'] ?></span>
                     </div>
                 <?php  } ?>
@@ -48,7 +48,7 @@
                 <div class="doctores">
                     <?php foreach ($DATA['doctores'] as $item) { ?>
                         <div class="item">
-                            <img src="<?= $DATA['http_domain'] ?>public/img.users/<?= $item['user_foto'] ?>" alt="Foto del Doctor <?= $item['user_nombre'] ?>">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.users/<?= $item['user_foto'] ?>?last=<?= $item['user_last'] ?>" alt="Foto del Doctor <?= $item['user_nombre'] ?>">
                             <b>Dr. <?= $item['user_nombre'] ?></b>
                             <span><?= $item['user_especialidad'] ?></span>
                         </div>

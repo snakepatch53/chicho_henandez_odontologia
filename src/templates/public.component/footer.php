@@ -1,7 +1,7 @@
 <section>
     <div class="row">
         <a class="logo" href="<?= $DATA['http_domain'] ?>">
-            <img src="<?= $DATA['http_domain'] ?>public/img/logo2.png" alt="logo">
+            <img src="<?= $DATA['http_domain'] ?>public/img/logo2.png?last=<?= $DATA['info']['info_last'] ?>" alt="logo">
         </a>
         <div class="info">
             <h1>Consultorio dental <?= $DATA['info']['info_nombre'] ?></h1>

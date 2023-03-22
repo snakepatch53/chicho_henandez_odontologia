@@ -30,5 +30,5 @@ function logout() {
 
 window.onkeyup = (evt) => {
     if (evt.ctrlKey && evt.keyCode == 190) logout();
-    if (evt.ctrlKey && evt.keyCode == 188) window.open("./services/configuration", "_blank");
+    if (evt.ctrlKey && evt.keyCode == 188) window.open(http_domain + "services/configuration", "_blank");
 };

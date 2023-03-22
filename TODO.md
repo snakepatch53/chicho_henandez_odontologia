@@ -1,8 +1,5 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
-<b><i>(lunes, 20 de marzo de 2023)</i></b><br>
-🟢 programacion de servicios para cada DAO <br>
-<br>
 <b><i>(martes, 21 de marzo de 2023)</i></b><br>
 🟢 diseño de pagina inicio (administrador panel) <br>
 🟢 diseño de pagina informacion (administrador panel) <br>
@@ -35,6 +32,7 @@
 
 # ❌ ERRORES QUE TENGO QUE SOLUCIONAR ❌
 
+❌ En el panel el scroll en Y no esta funcionando<br>
 ❌<br>
 ❌<br>
 
@@ -72,8 +70,11 @@
 ✅ diseño de pagina login (clientes) <br>
 ✅ control de sesiones <br>
 ✅ Solucione el error ✖️ con el adaptador de rutas<br>
-✅ programacion de adaptador de acceso a datos <br>
 <b><i>(Lunes, 20 de marzo de 2023)</i></b><br>
 ✅ diseño de base de datos sql <br>
+<b><i>(Martes, 21 de marzo de 2023)</i></b><br>
+✅ programacion de adaptador de acceso a datos <br>
+<b><i>(Miercoles, 22 de marzo de 2023)</i></b><br>
+✅ programacion de servicios para cada DAO <br>
 ✅<br>
 ✅<br>

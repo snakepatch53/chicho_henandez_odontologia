@@ -37,6 +37,11 @@ class InfoDao
         string $info_celular,
         string $info_email
     ): bool {
+        $info_nombre = addslashes($info_nombre);
+        $info_filosofia = addslashes($info_filosofia);
+        $info_resumen = addslashes($info_resumen);
+        $info_mision = addslashes($info_mision);
+        $info_vision = addslashes($info_vision);
         $last = date("Y-m-d H:i:s");
         $resultset = ($this->mysqlAdapter)->query("
             UPDATE info SET     
@@ -53,6 +58,9 @@ class InfoDao
                 info_email = '$info_email',
                 info_last = '$last'
             ");
-        return $resultset;
+        if ($resultset) {
+            return true;
+        }
+        return false;
     }
 }

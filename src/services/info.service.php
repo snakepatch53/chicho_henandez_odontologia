@@ -53,7 +53,7 @@ class InfoService
             $info_telefono = $_POST['info_telefono'];
             $info_celular = $_POST['info_celular'];
             $info_email = $_POST['info_email'];
-            $result = $infoDao->update(
+            $resultset = $infoDao->update(
                 $info_nombre,
                 $info_filosofia,
                 $info_resumen,
@@ -66,14 +66,14 @@ class InfoService
                 $info_celular,
                 $info_email
             );
-            if (!$result) {
+            if (!$resultset) {
                 $result['message'] = 'Error al actualizar la información';
                 echo json_encode($result);
                 return;
             }
-            if (isset($_FILES['info_logo'])) {
-                $info_logo = $_FILES['info_logo'];
-            }
+            if (isset($_FILES['info_logo1'])) uploadFIle($_FILES['info_logo1'], './public/img/', 'logo1', 'png');
+            if (isset($_FILES['info_logo2'])) uploadFIle($_FILES['info_logo2'], './public/img/', 'logo2', 'png');
+            if (isset($_FILES['info_logo3'])) uploadFIle($_FILES['info_logo3'], './public/img/', 'logo3', 'png');
             $result['status'] = 'success';
             $result['message'] = 'Información actualizada correctamente';
             $result['response'] = true;

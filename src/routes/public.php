@@ -7,6 +7,21 @@ $radapter = new RAdapter($router, $_TEMPLATE_PUBLIC_PATH, $_ENV['HTTP_DOMAIN']);
  * ? El error a quedado solucionado
  */
 // HOME
+$radapter->getHTML('/index.php', 'home', fn () => middlewareSessionLogout(), function ($DATA) {
+    $info = (new InfoDao($DATA['mysqlAdapter']))->select();
+    $slider = (new SliderDao($DATA['mysqlAdapter']))->select();
+    $social = (new SocialDao($DATA['mysqlAdapter']))->select();
+    $servicios = (new ServicioDao($DATA['mysqlAdapter']))->selectLimit(4);
+    $doctores = (new UserDao($DATA['mysqlAdapter']))->selectDoctoresLimit(2);
+    return [
+        'info' => $info,
+        'slider' => $slider,
+        'social' => $social,
+        'servicios' => $servicios,
+        'doctores' => $doctores
+    ];
+});
+
 $radapter->getHTML('/', 'home', fn () => middlewareSessionLogout(), function ($DATA) {
     $info = (new InfoDao($DATA['mysqlAdapter']))->select();
     $slider = (new SliderDao($DATA['mysqlAdapter']))->select();
@@ -22,6 +37,7 @@ $radapter->getHTML('/', 'home', fn () => middlewareSessionLogout(), function ($D
     ];
 });
 
+// CONTACTOS
 $radapter->getHTML('/contactos', 'contactos', fn () => middlewareSessionLogout(), function ($DATA) {
     $info = (new InfoDao($DATA['mysqlAdapter']))->select();
     $social = (new SocialDao($DATA['mysqlAdapter']))->select();
@@ -31,6 +47,7 @@ $radapter->getHTML('/contactos', 'contactos', fn () => middlewareSessionLogout()
     ];
 });
 
+// NOSOTROS
 $radapter->getHTML('/nosotros', 'nosotros', fn () => middlewareSessionLogout(), function ($DATA) {
     $info = (new InfoDao($DATA['mysqlAdapter']))->select();
     $social = (new SocialDao($DATA['mysqlAdapter']))->select();
@@ -40,6 +57,7 @@ $radapter->getHTML('/nosotros', 'nosotros', fn () => middlewareSessionLogout(), 
     ];
 });
 
+// CITAS
 $radapter->getHTML('/citas', 'citas', fn () => middlewareSessionLogout(), function ($DATA) {
     $info = (new InfoDao($DATA['mysqlAdapter']))->select();
     $social = (new SocialDao($DATA['mysqlAdapter']))->select();
