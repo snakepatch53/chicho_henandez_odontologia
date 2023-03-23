@@ -274,12 +274,23 @@ VALUES
         'admin',
         'admin',
         'default.png',
-        'admin',
+        'user',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     ),
     (
         2,
+        'Root',
+        null,
+        'doctorayora',
+        'Pr&3W2L73#NGY5Ty',
+        'default.png',
+        'user',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        3,
         'Claudio Ayora',
         'Odontologia',
         'claudio',
@@ -290,7 +301,7 @@ VALUES
         '2023-01-01 00:00:00'
     ),
     (
-        3,
+        4,
         'David Ayora',
         'Odontologia',
         'david',
