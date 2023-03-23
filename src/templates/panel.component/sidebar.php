@@ -44,6 +44,10 @@
             <i class="fa-solid fa-envelope"></i>
             <span class="ms-2">Mensajes</span>
         </a>
+        <a href="<?= $DATA['http_domain'] ?>panel/citas" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "citas") ? "shadow  active" : "" ?>">
+            <i class="fa-solid fa-calendar"></i>
+            <span class="ms-2">Citas</span>
+        </a>
     </ul>
     <!-- List | end -->
 </div>

@@ -330,12 +330,14 @@ DROP TABLE IF EXISTS citas;
 CREATE TABLE citas (
     cita_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     cita_fecha VARCHAR(50),
-    cita_hora VARCHAR(50),
-    cita_servicio VARCHAR(50),
     cita_last VARCHAR(50),
     cita_created VARCHAR(50),
     cliente_id INT,
     user_id INT,
+    hora_id INT,
+    servicio_id INT,
     FOREIGN KEY (cliente_id) REFERENCES clientes (cliente_id) ON DELETE CASCADE,
-    FOREIGN KEY (user_id) REFERENCES users (user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users (user_id) ON DELETE CASCADE,
+    FOREIGN KEY (hora_id) REFERENCES horas (hora_id) ON DELETE CASCADE,
+    FOREIGN KEY (servicio_id) REFERENCES servicios (servicio_id) ON DELETE CASCADE
 ) ENGINE INNODB;

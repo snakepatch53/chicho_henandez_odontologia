@@ -26,6 +26,7 @@ require_once('./src/dao/HoraDao.php');
 require_once('./src/dao/SliderDao.php');
 require_once('./src/dao/SocialDao.php');
 require_once('./src/dao/MensajeDao.php');
+require_once('./src/dao/CitaDao.php');
 
 // cargamos los servicios para el web service
 require_once('./src/services/info.service.php');
@@ -36,6 +37,7 @@ require_once('./src/services/hora.service.php');
 require_once('./src/services/slider.service.php');
 require_once('./src/services/social.service.php');
 require_once('./src/services/mensaje.service.php');
+require_once('./src/services/cita.service.php');
 
 // cargamos las variables de entorno
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);

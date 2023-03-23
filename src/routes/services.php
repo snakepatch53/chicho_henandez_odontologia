@@ -54,3 +54,9 @@ $radapter->post('/services/mensaje/select', fn (...$args) => MensajeService::sel
 $radapter->post('/services/mensaje/insert', fn (...$args) => MensajeService::insert(...$args));
 // $radapter->post('/services/mensaje/update', fn (...$args) => MensajeService::update(...$args));
 $radapter->post('/services/mensaje/delete', fn (...$args) => MensajeService::delete(...$args));
+
+// CITAS
+$radapter->post('/services/cita/select', fn (...$args) => CitaService::select(...$args));
+$radapter->post('/services/cita/insert', fn (...$args) => CitaService::insert(...$args));
+$radapter->post('/services/cita/update', fn (...$args) => CitaService::update(...$args));
+$radapter->post('/services/cita/delete', fn (...$args) => CitaService::delete(...$args));

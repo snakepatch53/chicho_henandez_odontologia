@@ -66,3 +66,14 @@ $radapter->getHTML('/panel/mensajes', 'mensajes', fn () => middlewareSessionLogi
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
     ];
 });
+
+// CITAS
+$radapter->getHTML('/panel/citas', 'citas', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'horas' => (new HoraDao($DATA['mysqlAdapter']))->select(),
+        'servicios' => (new ServicioDao($DATA['mysqlAdapter']))->select(),
+        'clientes' => (new ClienteDao($DATA['mysqlAdapter']))->select(),
+        'doctores' => (new UserDao($DATA['mysqlAdapter']))->selectDoctores(),
+    ];
+});
