@@ -1,18 +1,8 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
-<b><i>(martes, 21 de marzo de 2023)</i></b><br>
-🟢 diseño de pagina inicio (administrador panel) <br>
-🟢 diseño de pagina informacion (administrador panel) <br>
-🟢 diseño de pagina slider (administrador panel) <br>
-<br>
-<b><i>(miercoles, 22 de marzo de 2023)</i></b><br>
-🟢 diseño de pagina usuarios (administrador panel) <br>
-🟢 diseño de pagina clientes (administrador panel) <br>
-🟢 diseño de pagina servicios (administrador panel) <br>
 <br>
 <b><i>(jueves, 23 de marzo de 2023)</i></b><br>
 🟢 diseño de pagina citas (administrador panel) <br>
-🟢 presentacion de desde la base de datos en todas las interfaces <br>
 🟢 programacion de controlador pagina publica con javascript <br>
 <br>
 <b><i>(viernes, 24 de marzo de 2023)</i></b><br>
@@ -76,5 +66,12 @@
 ✅ programacion de adaptador de acceso a datos <br>
 <b><i>(Miercoles, 22 de marzo de 2023)</i></b><br>
 ✅ programacion de servicios para cada DAO <br>
+✅ diseño de pagina inicio (administrador panel) <br>
+✅ diseño de pagina informacion (administrador panel) <br>
+✅ diseño de pagina slider (administrador panel) <br>
+✅ diseño de pagina usuarios (administrador panel) <br>
+✅ diseño de pagina clientes (administrador panel) <br>
+✅ diseño de pagina servicios (administrador panel) <br>
+✅ presentacion de desde la base de datos en todas las interfaces <br>
 ✅<br>
 ✅<br>

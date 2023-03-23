@@ -189,11 +189,3 @@ input[value="1"] ~ .checkbox:before {
     background: #ffffff;
     padding: 2px;
 }
-
-.textlink {
-    
-}
-
-.iconlink {
-    background: attr(social_color);
-}
