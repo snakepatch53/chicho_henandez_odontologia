@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="<?= $proyect['lang'] ?>">
+<html lang="es">
 
 <head>
-    <?php include('./view/component.panel/head.php') ?>
-    <title>Links</title>
+    <?php include('./src/templates/panel.component/head.php') ?>
 </head>
 
 <body>
-    <?php include('./view/component.panel/header.php') ?>
-    <?php include('./view/component.panel/sidebar.php') ?>
-    <main class="animate__animated animate__fadeIn">
+    <?php include('./src/templates/panel.component/header.php') ?>
+    <?php include('./src/templates/panel.component/sidebar.php') ?>
+    <main>
         <!-- CONTENT PAGE | INI -->
-        <div class="pt-4 px-md-5 px-1">
+        <div class=" pt-4 px-md-5 px-1">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $proyect['url'] ?>home">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Links</li>
+                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>home">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Horas</li>
                 </ol>
             </nav>
             <div class="card shadow">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <b>Links</b>
+                        <b>Horas</b>
                         <button class="btn btn-outline-success" onclick="handleFunction.new()">
                             <i class="fa-solid fa-plus"></i>
                             <span>Crear nuevo</span>
@@ -33,11 +32,11 @@
                         <thead class="bg-dark text-light">
                             <tr>
                                 <th class="d-none d-md-table-cell" scope="col">#</th>
-                                <th class="text-center text-md-left" scope="col">Nombre</th>
+                                <th class="text-center text-md-left" scope="col">Hora</th>
                                 <th class="text-center" scope="col">Acciones</th>
                             </tr>
                         </thead>
-                        <tbody id="element-table-link"></tbody>
+                        <tbody id="element-table"></tbody>
                     </table>
                 </div>
             </div>
@@ -52,8 +51,8 @@
         <!-- form | ini -->
         <div class="modal fade" id="element-modalform" tabindex="-1" aria-labelledby="element-modalformLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <form class="modal-content needs-validation" id="element-lotteryform" onsubmit="return false" novalidate>
-                    <input type="hidden" name="link_id" value="0">
+                <form class="modal-content needs-validation" id="element-form" onsubmit="return false" novalidate>
+                    <input type="hidden" name="hora_id" value="0">
                     <div class="modal-header">
                         <h5 class="modal-title" id="element-modalformLabel">Formulario</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -63,17 +62,9 @@
                         <div class="row g-3">
                             <div class="col-md-12">
                                 <label for="validationServer01" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="validationServer01" placeholder="Arcotel, etc.." name="link_name" required>
+                                <input type="time" class="form-control" id="validationServer01" placeholder="Hora" name="hora_hora" required>
                                 <div class="invalid-feedback">
-                                    Escribe el nombre del link!
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <label for="validationServer02" class="form-label">URL</label>
-                                <input type="text" class="form-control" id="validationServer02" placeholder="https://www.." name="link_ref" required>
-                                <div class="invalid-feedback">
-                                    Inserta un link!
+                                    Ingresa una hora de tu horario!
                                 </div>
                             </div>
                         </div>
@@ -111,8 +102,8 @@
     </main>
 </body>
 <foot>
-    <?php include('./view/component.panel/foot.php') ?>
-    <script src="<?= $proyect['url'] ?>control/script.panel/links.js"></script>
+    <?php include('./src/templates/panel.component/foot.php') ?>
+    <script src="<?= $DATA['http_domain'] ?>public/js.panel/horas.js"></script>
 </foot>
 
 </html>

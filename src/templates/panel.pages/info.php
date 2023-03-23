@@ -4,7 +4,6 @@
 <head>
     <?php include('./src/templates/panel.component/head.php') ?>
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/info.css">
-    <title>Informacion</title>
 </head>
 
 <body>

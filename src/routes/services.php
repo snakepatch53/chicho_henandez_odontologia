@@ -17,6 +17,12 @@ $radapter->post('/services/user/insert', fn (...$args) => UserService::insert(..
 $radapter->post('/services/user/update', fn (...$args) => UserService::update(...$args));
 $radapter->post('/services/user/delete', fn (...$args) => UserService::delete(...$args));
 
+// CLIENTES
+$radapter->post('/services/cliente/select', fn (...$args) => ClienteService::select(...$args));
+$radapter->post('/services/cliente/insert', fn (...$args) => ClienteService::insert(...$args));
+$radapter->post('/services/cliente/update', fn (...$args) => ClienteService::update(...$args));
+$radapter->post('/services/cliente/delete', fn (...$args) => ClienteService::delete(...$args));
+
 // SERVICIOS
 $radapter->post('/services/servicio/select', fn (...$args) => ServicioService::select(...$args));
 $radapter->post('/services/servicio/insert', fn (...$args) => ServicioService::insert(...$args));
@@ -42,3 +48,9 @@ $radapter->post('/services/social/select', fn (...$args) => SocialService::selec
 $radapter->post('/services/social/insert', fn (...$args) => SocialService::insert(...$args));
 $radapter->post('/services/social/update', fn (...$args) => SocialService::update(...$args));
 $radapter->post('/services/social/delete', fn (...$args) => SocialService::delete(...$args));
+
+// MENSAJES
+$radapter->post('/services/mensaje/select', fn (...$args) => MensajeService::select(...$args));
+$radapter->post('/services/mensaje/insert', fn (...$args) => MensajeService::insert(...$args));
+// $radapter->post('/services/mensaje/update', fn (...$args) => MensajeService::update(...$args));
+$radapter->post('/services/mensaje/delete', fn (...$args) => MensajeService::delete(...$args));

@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="<?= $proyect['lang'] ?>">
+<html lang="es">
 
 <head>
-    <?php include('./view/component.panel/head.php') ?>
-    <title>Usuarios</title>
+    <?php include('./src/templates/panel.component/head.php') ?>
 </head>
 
 <body>
-    <?php include('./view/component.panel/header.php') ?>
-    <?php include('./view/component.panel/sidebar.php') ?>
-    <main class="animate__animated animate__fadeIn">
+    <?php include('./src/templates/panel.component/header.php') ?>
+    <?php include('./src/templates/panel.component/sidebar.php') ?>
+    <main>
         <!-- CONTENT PAGE | INI -->
-        <div class="pt-4 px-md-5 px-1">
+        <div class=" pt-4 px-md-5 px-1">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $proyect['url'] ?>home">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Usuarios</li>
+                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>home">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Servicios</li>
                 </ol>
             </nav>
             <div class="card shadow">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <b>Usuarios</b>
+                        <b>Servicios</b>
                         <button class="btn btn-outline-success" onclick="handleFunction.new()">
                             <i class="fa-solid fa-plus"></i>
                             <span>Crear nuevo</span>
@@ -34,11 +33,11 @@
                             <tr>
                                 <th class="d-none d-md-table-cell" scope="col">#</th>
                                 <th class="text-center text-md-left" scope="col">Nombre</th>
-                                <th class="text-center text-md-left" scope="col">User</th>
+                                <th class="d-none d-md-table-cell text-center text-md-left" scope="col">Imagen</th>
                                 <th class="text-center" scope="col">Acciones</th>
                             </tr>
                         </thead>
-                        <tbody id="element-table-user"></tbody>
+                        <tbody id="element-table"></tbody>
                     </table>
                 </div>
             </div>
@@ -53,8 +52,8 @@
         <!-- form | ini -->
         <div class="modal fade" id="element-modalform" tabindex="-1" aria-labelledby="element-modalformLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <form class="modal-content needs-validation" id="element-lotteryform" onsubmit="return false" novalidate>
-                    <input type="hidden" name="user_id" value="0">
+                <form class="modal-content needs-validation" id="element-form" onsubmit="return false" novalidate>
+                    <input type="hidden" name="servicio_id" value="0">
                     <div class="modal-header">
                         <h5 class="modal-title" id="element-modalformLabel">Formulario</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -62,27 +61,30 @@
                     <div class="modal-body">
                         <!-- form | ini -->
                         <div class="row g-3">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <label for="validationServer01" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="validationServer01" placeholder="Ejm: Luis.." name="user_name" required>
+                                <input type="text" class="form-control" id="validationServer01" placeholder="Nombre.." name="servicio_nombre" required>
                                 <div class="invalid-feedback">
-                                    Escribe el nombre!
+                                    Escribe el nombre del servicio!
                                 </div>
                             </div>
+
                             <div class="col-md-6">
-                                <label for="validationServer02" class="form-label">Usuario</label>
-                                <input type="text" class="form-control" id="validationServer02" placeholder="Ejm: cls123.." name="user_user" required>
+                                <label for="validationServer03" class="form-label">Imagen</label>
+                                <input type="file" class="form-control" id="validationServer03" name="servicio_imagen" accept="image/*" required>
                                 <div class="invalid-feedback">
-                                    Escribe el usuario!
+                                    Selecciona una imagen del servicio!
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="validationServer03" class="form-label">Contraseña</label>
-                                <input type="text" class="form-control" id="validationServer03" placeholder="Ejm: ********" name="user_pass" required>
+
+                            <div class="col-md-12">
+                                <label for="validationServer04" class="form-label">Descripcion</label>
+                                <textarea class="form-control" name="servicio_descripcion" id="validationServer04" placeholder="Descripcion"></textarea>
                                 <div class="invalid-feedback">
-                                    Escribe la contraseña!
+                                    Selecciona una imagen del servicio!
                                 </div>
                             </div>
+
 
 
                         </div>
@@ -120,8 +122,8 @@
     </main>
 </body>
 <foot>
-    <?php include('./view/component.panel/foot.php') ?>
-    <script src="<?= $proyect['url'] ?>control/script.panel/users.js"></script>
+    <?php include('./src/templates/panel.component/foot.php') ?>
+    <script src="<?= $DATA['http_domain'] ?>public/js.panel/servicios.js"></script>
 </foot>
 
 </html>

@@ -18,4 +18,51 @@ $radapter->getHTML('/panel/info', 'info', fn () => middlewareSessionLogin(), fun
     ];
 });
 
-// $radapter->getHTML('/panel/users', 'users');
+// SLIDER
+$radapter->getHTML('/panel/slider', 'slider', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+// SOCIAL
+$radapter->getHTML('/panel/social', 'social', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+// HORAS
+$radapter->getHTML('/panel/horas', 'horas', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+// SERVICIOS
+$radapter->getHTML('/panel/servicios', 'servicios', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+// USER
+$radapter->getHTML('/panel/user', 'user', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+// CLIENTES
+$radapter->getHTML('/panel/clientes', 'clientes', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+// MENSAJES
+$radapter->getHTML('/panel/mensajes', 'mensajes', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});

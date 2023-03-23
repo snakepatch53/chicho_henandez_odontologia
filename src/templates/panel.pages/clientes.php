@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="<?= $proyect['lang'] ?>">
+<html lang="es">
 
 <head>
-    <?php include('./view/component.panel/head.php') ?>
-    <title>Planes</title>
+    <?php include('./src/templates/panel.component/head.php') ?>
 </head>
 
 <body>
-    <?php include('./view/component.panel/header.php') ?>
-    <?php include('./view/component.panel/sidebar.php') ?>
-    <main class="animate__animated animate__fadeIn">
+    <?php include('./src/templates/panel.component/header.php') ?>
+    <?php include('./src/templates/panel.component/sidebar.php') ?>
+    <main>
         <!-- CONTENT PAGE | INI -->
         <div class="pt-4 px-md-5 px-1">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $proyect['url'] ?>home">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Planes</li>
+                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>home">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Clientes</li>
                 </ol>
             </nav>
             <div class="card shadow">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <b>Planes</b>
+                        <b>Clientes</b>
                         <button class="btn btn-outline-success" onclick="handleFunction.new()">
                             <i class="fa-solid fa-plus"></i>
                             <span>Crear nuevo</span>
@@ -34,13 +33,12 @@
                             <tr>
                                 <th class="d-none d-md-table-cell" scope="col">#</th>
                                 <th class="text-center text-md-left" scope="col">Nombre</th>
-                                <th class="text-center text-md-left" scope="col">Icono</th>
-                                <th class="d-none d-md-table-cell" scope="col">Velocidad</th>
-                                <th class="d-none d-md-table-cell" scope="col">Precio</th>
+                                <th class="d-none d-md-table-cell text-center text-md-left" scope="col">Cedula</th>
+                                <th class="d-none d-md-table-cell text-center text-md-left" scope="col">Celular</th>
                                 <th class="text-center" scope="col">Acciones</th>
                             </tr>
                         </thead>
-                        <tbody id="element-table-plan"></tbody>
+                        <tbody id="element-table"></tbody>
                     </table>
                 </div>
             </div>
@@ -55,8 +53,8 @@
         <!-- form | ini -->
         <div class="modal fade" id="element-modalform" tabindex="-1" aria-labelledby="element-modalformLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <form class="modal-content needs-validation" id="element-lotteryform" onsubmit="return false" novalidate>
-                    <input type="hidden" name="plan_id" value="0">
+                <form class="modal-content needs-validation" id="element-form" onsubmit="return false" novalidate>
+                    <input type="hidden" name="cliente_id" value="0">
                     <div class="modal-header">
                         <h5 class="modal-title" id="element-modalformLabel">Formulario</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -64,62 +62,48 @@
                     <div class="modal-body">
                         <!-- form | ini -->
                         <div class="row g-3">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <label for="validationServer01" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="validationServer01" placeholder="Basico, medio, avanzado" name="plan_name" required>
+                                <input type="text" class="form-control" id="validationServer01" placeholder="Nombre.." name="cliente_nombre" required>
                                 <div class="invalid-feedback">
-                                    Escribe el nombre!
+                                    Escribe el nombre del cliente!
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label for="validationCustom02" class="form-label">Icono</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder='<i class="fa-solid fa-gauge"></i>' name="plan_icon" required>
+                                <label for="validationServer02" class="form-label">Cedula</label>
+                                <input type="text" class="form-control" id="validationServer02" placeholder="Cedula.." name="cliente_cedula" required>
                                 <div class="invalid-feedback">
-                                    Inserta un icono de fontawesome!
+                                    Escribe el numero de cedula!
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label for="validationServer03" class="form-label">Limitacion de consumo</label>
-                                <input type="text" class="form-control" id="validationServer03" placeholder="Ilimitado" name="plan_sharing_name" required>
+                                <label for="validationServer03" class="form-label">Celular</label>
+                                <input type="text" class="form-control" id="validationServer03" placeholder="Celular.." name="cliente_celular" required>
                                 <div class="invalid-feedback">
-                                    Escribe la limitacion de consumo!
+                                    Escribe el numero de cedula!
                                 </div>
                             </div>
+
                             <div class="col-md-6">
-                                <label for="validationServer03" class="form-label">Comparticion</label>
-                                <input type="text" class="form-control" id="validationServer03" placeholder="Sin comparticion" name="plan_sharing_value" required>
+                                <label for="validationServer04" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="validationServer04" placeholder="Email" name="cliente_email" required>
                                 <div class="invalid-feedback">
-                                    Escribe el grado de comparticion!
+                                    Escribe el email del cliente!
                                 </div>
                             </div>
+
                             <div class="col-md-6">
-                                <label for="validationServer04" class="form-label">Precio</label>
-                                <input type="number" class="form-control" id="validationServer04" placeholder="20, 25, 30, 40" name="plan_price_value" required>
+                                <label for="validationServer05" class="form-label">Direccion</label>
+                                <input type="text" class="form-control" id="validationServer05" placeholder="Direccion" name="cliente_direccion" required>
                                 <div class="invalid-feedback">
-                                    Escriba el precio!
+                                    Escribe la direccion del cliente!
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="validationServer05" class="form-label">Incluye IVA?</label>
-                                <input type="hidden" class="form-control" id="validationServer05" value="false" name="plan_price_iva">
-                                <div class="checkbox" id="checkboxiva"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="validationServer06" class="form-label">Velocidad</label>
-                                <input type="text" class="form-control" id="validationServer06" placeholder="20 MEGAS" name="plan_speed_value" required>
-                                <div class="invalid-feedback">
-                                    Escriba la velocidad!
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="validationServer07" class="form-label">Numero de dispositivos</label>
-                                <input type="number" class="form-control" id="validationServer07" placeholder="20" name="plan_speed_devices" required>
-                                <div class="invalid-feedback">
-                                    Especifique el numero de dispositivos!
-                                </div>
-                            </div>
+
+
+
                         </div>
                         <!-- form | end -->
                     </div>
@@ -155,8 +139,8 @@
     </main>
 </body>
 <foot>
-    <?php include('./view/component.panel/foot.php') ?>
-    <script src="<?= $proyect['url'] ?>control/script.panel/plans.js"></script>
+    <?php include('./src/templates/panel.component/foot.php') ?>
+    <script src="<?= $DATA['http_domain'] ?>public/js.panel/clientes.js"></script>
 </foot>
 
 </html>

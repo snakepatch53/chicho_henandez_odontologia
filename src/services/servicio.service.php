@@ -79,8 +79,18 @@ class ServicioService
             $servicio_imagen = $current_servicio['servicio_imagen'];
 
             if (isset($_FILES['servicio_imagen'])) {
-                deleteFile('./public/img.servicios/' . $servicio_imagen);
-                $servicio_imagen = uploadFIle($_FILES['servicio_imagen'], './public/img.servicios/');
+                if ($_FILES['servicio_imagen']['tmp_name'] != "" or $_FILES['servicio_imagen']['tmp_name'] != null) {
+                    if (
+                        $servicio_imagen != '1.png' &&
+                        $servicio_imagen != '2.png' &&
+                        $servicio_imagen != '3.png' &&
+                        $servicio_imagen != '4.png' &&
+                        $servicio_imagen != ''
+                    ) {
+                        deleteFile('./public/img.servicios/' . $servicio_imagen);
+                    }
+                    $servicio_imagen = uploadFIle($_FILES['servicio_imagen'], './public/img.servicios/');
+                }
             }
 
             $servicio = $servicioDao->update(
@@ -122,7 +132,15 @@ class ServicioService
                 echo json_encode($result);
                 exit();
             }
-            deleteFile('./public/img.servicios/' . $servicio['servicio_imagen']);
+            if (
+                $servicio['servicio_imagen'] != '1.png' &&
+                $servicio['servicio_imagen'] != '2.png' &&
+                $servicio['servicio_imagen'] != '3.png' &&
+                $servicio['servicio_imagen'] != '4.png' &&
+                $servicio['servicio_imagen'] != ''
+            ) {
+                deleteFile('./public/img.servicios/' . $servicio['servicio_imagen']);
+            }
             $servicio = $servicioDao->deleteById($servicio_id);
             $result['status'] = 'success';
             $result['message'] = 'Servicio eliminado correctamente';

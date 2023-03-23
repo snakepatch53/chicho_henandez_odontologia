@@ -89,7 +89,11 @@ class UserService
             $user_pass = $_POST['user_pass'];
             $user_tipo = $_POST['user_tipo'];
             $user_foto = "default.png";
-            if (isset($_FILES['user_foto'])) $user_foto = uploadFIle($_FILES['user_foto'], './public/img.users/');
+            if (isset($_FILES['user_foto'])) {
+                if ($_FILES['user_foto']['tmp_name'] != "" or $_FILES['user_foto']['tmp_name'] != null) {
+                    $user_foto = uploadFIle($_FILES['user_foto'], './public/img.users/');
+                }
+            };
             $user = $userDao->insert(
                 $user_nombre,
                 $user_especialidad,
@@ -142,8 +146,10 @@ class UserService
             $user_foto = $current_user['user_foto'];
 
             if (isset($_FILES['user_foto'])) {
-                if ($user_foto != 'default.png') deleteFile('./public/img.users/' . $user_foto);
-                $user_foto = uploadFIle($_FILES['user_foto'], './public/img.users/');
+                if ($_FILES['user_foto']['tmp_name'] != "" or $_FILES['user_foto']['tmp_name'] != null) {
+                    if ($user_foto != 'default.png' && $user_foto != '1.png' && $user_foto != '2.png' && $user_foto != '') deleteFile('./public/img.users/' . $user_foto);
+                    $user_foto = uploadFIle($_FILES['user_foto'], './public/img.users/');
+                }
             }
             $user = $userDao->update(
                 $user_id,
@@ -181,7 +187,7 @@ class UserService
                 echo json_encode($result);
                 exit();
             }
-            if ($user['user_foto'] != 'default.png') {
+            if ($user['user_foto'] != 'default.png' && $user['user_foto'] != '1.png' && $user['user_foto'] != '2.png' && $user['user_foto'] != '') {
                 deleteFile('./public/img.users/' . $user['user_foto']);
             }
             $userDao->deleteById($user_id);

@@ -9,7 +9,7 @@
 <body>
     <?php include('./view/component.panel/header.php') ?>
     <?php include('./view/component.panel/sidebar.php') ?>
-    <main class="animate__animated animate__fadeIn">
+    <main>
         hola
     </main>
 </body>

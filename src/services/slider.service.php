@@ -59,7 +59,8 @@ class SliderService
         ];
         if (isset(
             $_POST['slider_id'],
-            $_POST['slider_titulo']
+            $_POST['slider_titulo'],
+            $_FILES['slider_imagen']
         )) {
             $adapter = $DATA['mysqlAdapter'];
             $sliderDao = new SliderDao($adapter);
@@ -116,11 +117,14 @@ class SliderService
             }
 
             $sliderDao->delete($slider_id);
-            deleteFile('./public/img.slider/' . $current_slider['slider_imagen']);
+            if ($current_slider['slider_imagen'] != '1.png' && $current_slider['slider_imagen'] != '2.png' && $current_slider['slider_imagen'] != '3.png') {
+                deleteFile('./public/img.slider/' . $current_slider['slider_imagen']);
+            }
             $result['status'] = 'success';
             $result['message'] = 'Slider eliminado correctamente';
             $result['response'] = true;
             $result['data'] = $slider_id;
         }
+        echo json_encode($result);
     }
 }

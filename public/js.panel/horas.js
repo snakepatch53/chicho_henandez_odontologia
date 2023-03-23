@@ -34,22 +34,22 @@ async function main() {
 const handleFunction = {
     new: function () {
         uiFunction.modalForm_clear();
-        $form["user_id"].value = 0;
+        $form["hora_id"].value = 0;
         bootstrap_modalform.show();
     },
     edit: function ($register_id) {
-        const register = uiFunction.database.find((el) => el["user_id"] == $register_id);
+        const register = uiFunction.database.find((el) => el["hora_id"] == $register_id);
         setValuesForm(register, $form);
         bootstrap_modalform.show();
     },
     delete: function (register_id) {
-        $form["user_id"].value = register_id;
+        $form["hora_id"].value = register_id;
         bootstrap_modalconfirm.show();
     },
 
     // gift functions
     giftTrButton: function (register_id) {
-        $form_gift["user_id"].value = register_id;
+        $form_gift["hora_id"].value = register_id;
         uiFunction.refreshTableGift(register_id);
         element_modalgift.show();
     },
@@ -57,7 +57,7 @@ const handleFunction = {
 
 const crudFunction = {
     select: async function () {
-        await fetch_query(new FormData($form), "user", "select").then((res) => {
+        await fetch_query(new FormData($form), "hora", "select").then((res) => {
             if (res.response) {
                 uiFunction.database = res.data;
                 uiFunction.refreshTable();
@@ -65,14 +65,14 @@ const crudFunction = {
         });
     },
     insertUpdate: function (form) {
-        const action = $form["user_id"].value == 0 ? "insert" : "update";
-        fetch_query(new FormData(form), "user", action).then((res) => {
+        const action = $form["hora_id"].value == 0 ? "insert" : "update";
+        fetch_query(new FormData(form), "hora", action).then((res) => {
             uiFunction.modalForm_hide();
             this.select();
         });
     },
     delete: function () {
-        fetch_query(new FormData($form), "user", "delete").then((res) => {
+        fetch_query(new FormData($form), "hora", "delete").then((res) => {
             uiFunction.modalForm_hide();
             this.select();
             uiFunction.modalConfirm_hide();
@@ -83,20 +83,19 @@ const crudFunction = {
 const uiFunction = {
     database: [],
     giftDatabase: [],
-    getTr: function ({ user_id, user_nombre, user_tipo, user_foto, user_last }) {
+    getTr: function ({ hora_id, hora_hora }) {
         return `
             <tr>
-                <td class="d-none d-md-table-cell fw-bold">${user_id}</td>
-                <td class="text-center text-md-left">${user_nombre}</td>
-                <td class="d-none d-md-table-cell text-center text-md-left">
-                    <img class="userfoto" src="${http_domain}public/img.users/${user_foto}?last=${user_last}" alt="Foto del usuario ${user_nombre}" />
+                <td class="d-none d-md-table-cell fw-bold">${hora_id}</td>
+                <td class="text-center text-md-left">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>${hora_hora}</span>
                 </td>
-                <td class="d-none d-md-table-cell text-center text-md-left">${user_tipo}</td>
                 <td class="text-center">
-                    <button class="btn btn-outline-primary" onclick="handleFunction.edit(${user_id})">
+                    <button class="btn btn-outline-primary" onclick="handleFunction.edit(${hora_id})">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </button>
-                    <button class="btn btn-outline-danger" onclick="handleFunction.delete(${user_id})">
+                    <button class="btn btn-outline-danger" onclick="handleFunction.delete(${hora_id})">
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </td>

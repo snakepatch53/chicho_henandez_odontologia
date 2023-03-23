@@ -34,22 +34,26 @@ async function main() {
 const handleFunction = {
     new: function () {
         uiFunction.modalForm_clear();
-        $form["user_id"].value = 0;
+        $form["mensaje_id"].value = 0;
         bootstrap_modalform.show();
     },
     edit: function ($register_id) {
-        const register = uiFunction.database.find((el) => el["user_id"] == $register_id);
+        const register = uiFunction.database.find((el) => el["mensaje_id"] == $register_id);
         setValuesForm(register, $form);
+        $form.querySelector("#form_mensaje_nombre").innerText = register["mensaje_nombre"];
+        $form.querySelector("#form_mensaje_celular").innerText = register["mensaje_celular"];
+        $form.querySelector("#form_mensaje_email").innerText = register["mensaje_email"];
+        $form.querySelector("#form_mensaje_mensaje").innerText = register["mensaje_mensaje"];
         bootstrap_modalform.show();
     },
     delete: function (register_id) {
-        $form["user_id"].value = register_id;
+        $form["mensaje_id"].value = register_id;
         bootstrap_modalconfirm.show();
     },
 
     // gift functions
     giftTrButton: function (register_id) {
-        $form_gift["user_id"].value = register_id;
+        $form_gift["mensaje_id"].value = register_id;
         uiFunction.refreshTableGift(register_id);
         element_modalgift.show();
     },
@@ -57,7 +61,7 @@ const handleFunction = {
 
 const crudFunction = {
     select: async function () {
-        await fetch_query(new FormData($form), "user", "select").then((res) => {
+        await fetch_query(new FormData($form), "mensaje", "select").then((res) => {
             if (res.response) {
                 uiFunction.database = res.data;
                 uiFunction.refreshTable();
@@ -65,14 +69,14 @@ const crudFunction = {
         });
     },
     insertUpdate: function (form) {
-        const action = $form["user_id"].value == 0 ? "insert" : "update";
-        fetch_query(new FormData(form), "user", action).then((res) => {
+        const action = $form["mensaje_id"].value == 0 ? "insert" : "update";
+        fetch_query(new FormData(form), "mensaje", action).then((res) => {
             uiFunction.modalForm_hide();
             this.select();
         });
     },
     delete: function () {
-        fetch_query(new FormData($form), "user", "delete").then((res) => {
+        fetch_query(new FormData($form), "mensaje", "delete").then((res) => {
             uiFunction.modalForm_hide();
             this.select();
             uiFunction.modalConfirm_hide();
@@ -83,20 +87,18 @@ const crudFunction = {
 const uiFunction = {
     database: [],
     giftDatabase: [],
-    getTr: function ({ user_id, user_nombre, user_tipo, user_foto, user_last }) {
+    getTr: function ({ mensaje_id, mensaje_nombre, mensaje_celular, mensaje_email }) {
         return `
             <tr>
-                <td class="d-none d-md-table-cell fw-bold">${user_id}</td>
-                <td class="text-center text-md-left">${user_nombre}</td>
-                <td class="d-none d-md-table-cell text-center text-md-left">
-                    <img class="userfoto" src="${http_domain}public/img.users/${user_foto}?last=${user_last}" alt="Foto del usuario ${user_nombre}" />
-                </td>
-                <td class="d-none d-md-table-cell text-center text-md-left">${user_tipo}</td>
+                <td class="d-none d-md-table-cell fw-bold">${mensaje_id}</td>
+                <td class="text-center text-md-left">${mensaje_nombre}</td>
+                <td class="d-none d-md-table-cell text-center text-md-left">${mensaje_celular}</td>
+                <td class="d-none d-md-table-cell text-center text-md-left">${mensaje_email}</td>
                 <td class="text-center">
-                    <button class="btn btn-outline-primary" onclick="handleFunction.edit(${user_id})">
-                        <i class="fa-solid fa-pen-to-square"></i>
+                    <button class="btn btn-outline-primary" onclick="handleFunction.edit(${mensaje_id})">
+                        <i class="fa-solid fa-envelope"></i>
                     </button>
-                    <button class="btn btn-outline-danger" onclick="handleFunction.delete(${user_id})">
+                    <button class="btn btn-outline-danger" onclick="handleFunction.delete(${mensaje_id})">
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </td>

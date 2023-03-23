@@ -8,7 +8,7 @@ const bootstrap_modalconfirm = new bootstrap.Modal(document.getElementById("elem
 
 async function main() {
     await crudFunction.select();
-    $form.slider_img.onchange = () => crudFunction.insert();
+    $form["slider_imagen"].onchange = () => crudFunction.insert();
 }
 
 //functions
@@ -22,12 +22,15 @@ const handleFunction = {
 const crudFunction = {
     select: async function () {
         await fetch_query(new FormData($form), "slider", "select").then((res) => {
-            uiFunction.database = res;
+            if (res.response == false) return;
+            uiFunction.database = res.data;
             uiFunction.refreshTable();
         });
     },
     insert: function () {
-        fetch_query(new FormData($form), "slider", "insert").then((res) => {
+        let formData = new FormData($form);
+        formData.append("slider_titulo", "");
+        fetch_query(formData, "slider", "insert").then((res) => {
             this.select();
         });
     },
@@ -42,12 +45,12 @@ const crudFunction = {
 const uiFunction = {
     database: [],
     giftDatabase: [],
-    getTrslider: function ({ slider_id, slider_img }) {
+    getTrslider: function ({ slider_id, slider_imagen }) {
         return `
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="card">
                     <div class="card-body">
-                        <img src="${$proyect.url}view/file.general/slider_img/${slider_img}" class="card-img slider-img" alt="...">
+                        <img src="${http_domain}public/img.slider/${slider_imagen}" class="card-img slider-img" alt="...">
                         <button class="btn btn-warning mt-2" style="width:100%" onclick="handleFunction.delete(${slider_id})">
                             <i class="fa-solid fa-trash"></i>
                             <span>Eliminar</span>

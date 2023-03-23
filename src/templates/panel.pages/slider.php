@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="<?= $proyect['lang'] ?>">
+<html lang="es">
 
 <head>
-    <?php include('./view/component.panel/head.php') ?>
-    <title>Slider</title>
+    <?php include('./src/templates/panel.component/head.php') ?>
 </head>
 
 <body>
-    <?php include('./view/component.panel/header.php') ?>
-    <?php include('./view/component.panel/sidebar.php') ?>
+    <?php include('./src/templates/panel.component/header.php') ?>
+    <?php include('./src/templates/panel.component/sidebar.php') ?>
     <main class="animate__animated animate__fadeIn">
         <!-- CONTENT PAGE | INI -->
         <div class="pt-4 px-md-5 px-1">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $proyect['url'] ?>home">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>home">Inicio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Slider</li>
                 </ol>
             </nav>
@@ -23,7 +22,7 @@
                     <form class="d-flex justify-content-between align-items-center" id="element-form">
                         <b>Slider</b>
                         <input type="hidden" name="slider_id">
-                        <input type="file" name="slider_img" class="input-file" placeholder="+ Agregar">
+                        <input type="file" name="slider_imagen" class="input-file" placeholder="➕ Agregar">
                     </form>
                 </div>
                 <div class="card-body">
@@ -57,8 +56,8 @@
     </main>
 </body>
 <foot>
-    <?php include('./view/component.panel/foot.php') ?>
-    <script src="<?= $proyect['url'] ?>control/script.panel/slider.js"></script>
+    <?php include('./src/templates/panel.component/foot.php') ?>
+    <script src="<?= $DATA['http_domain'] ?>public/js.panel/slider.js"></script>
 </foot>
 
 </html>
