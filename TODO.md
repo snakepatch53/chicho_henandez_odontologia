@@ -15,8 +15,6 @@
 
 <b><i>(Lunes, 13 de marzo de 2023)</i></b><br>
 🔴 diseño de pagina inicio (administrador panel) <br>
-<b><i>(Lunes, 20 de marzo de 2023)</i></b><br>
-🔴 programacion de objetos de acceso a datos DAO <br>
 🔴<br>
 🔴<br>
 
