@@ -8,21 +8,15 @@
 <b><i>(viernes, 24 de marzo de 2023)</i></b><br>
 🟢 reunion de presentacion <br>
 🟢 ultimos detalles <br>
-🟢<br>
-🟢<br>
 
 # 🔴 COSAS QUE ESTOY HACIENDO 🔴
 
 <b><i>(Lunes, 13 de marzo de 2023)</i></b><br>
 🔴 diseño de pagina inicio (administrador panel) <br>
-🔴<br>
-🔴<br>
 
 # ❌ ERRORES QUE TENGO QUE SOLUCIONAR ❌
 
 ❌ En el panel el scroll en Y no esta funcionando<br>
-❌<br>
-❌<br>
 
 # ✅ COSAS REALIZADAS ✅
 
@@ -71,5 +65,3 @@
 ✅ diseño de pagina clientes (administrador panel) <br>
 ✅ diseño de pagina servicios (administrador panel) <br>
 ✅ presentacion de desde la base de datos en todas las interfaces <br>
-✅<br>
-✅<br>
