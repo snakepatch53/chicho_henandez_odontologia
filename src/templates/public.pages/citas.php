@@ -9,6 +9,7 @@
         }
     </style>
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/citas.css">
+    <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/flatpickr.min.css">
 </head>
 
 <body>
@@ -20,11 +21,23 @@
     <main class="animate__animated animate__fadeIn">
         <section class="form">
             <div class="container">
-                <form id="citaform-cliente" class="show">
+                <div class="congratulations" id="congratulations">
+                    <canvas id="canvas-confetti"></canvas>
+                    <h2>¡Felicidades!</h2>
+                    <p>Has agendado una cita con nosotros.</p>
+                    <p>Te esperamos el <span id="cita-date"></span> a las <span id="cita-hour"></span> con el Dr. <span id="cita-doctor"></span></p>
+                    <p>Recuerda que puedes cancelar tu cita en cualquier momento.</p>
+                    <a href="<?= $DATA['http_domain'] ?>/">
+                        <span>Volver al inicio</span>
+                        <i class="fas fa-home"></i>
+                    </a>
+                </div>
+                <form id="citaform-cliente"> <!-- class="show" -->
+                    <input type="hidden" value="0" name="cliente_id">
                     <div class="row">
                         <label for="cedula">Cedula: </label>
-                        <div class="input">
-                            <input type="text" name="cedula" id="cedula">
+                        <div class="input" id="search-container">
+                            <input type="text" name="cliente_cedula">
                             <i class="fas fa-paper-plane"></i>
                         </div>
                     </div>
@@ -32,46 +45,49 @@
                         <div class="col">
                             <div class="row">
                                 <label for="nombre">Nombre: </label>
-                                <input type="text" name="nombre" id="nombre">
+                                <input type="text" name="cliente_nombre">
                             </div>
                             <div class="row">
                                 <label for="celular">Celular: </label>
-                                <input type="text" name="celular" id="celular">
+                                <input type="text" name="cliente_celular">
                             </div>
                         </div>
                         <div class="col">
                             <div class="row">
                                 <label for="email">Email: </label>
-                                <input type="text" name="email" id="email">
+                                <input type="text" name="cliente_email">
                             </div>
                             <div class="row">
                                 <label for="direccion">Direccion: </label>
-                                <input type="text" name="direccion" id="direccion">
+                                <input type="text" name="cliente_direccion">
                             </div>
                         </div>
                     </div>
                 </form>
                 <form id="citaform-cita">
                     <div class="col">
-                        <img src="<?= $DATA['http_domain'] ?>public/img/calendario.png" alt="Imagen Calendario">
+                        <!-- <img src="<?= $DATA['http_domain'] ?>public/img/calendario.png" alt="Imagen Calendario"> -->
+                        <div class="calendar disabled" id="calendar-container">
+                            <div class="flatpickr"></div>
+                        </div>
                     </div>
                     <div class="col">
+                        <label for="hora">Horarios disponibles: </label>
+                        <select name="hora_id">
+                            <option value="">Seleccione una opcion</option>
+                            <!-- <?php foreach ($DATA['horas'] as $item) { ?>
+                                <option value="<?= $item['hora_id'] ?>"><?= $item['hora_hora'] ?></option>
+                            <?php } ?> -->
+                        </select>
                         <label for="doctor">Eligir un especialista: </label>
-                        <select name="doctor" id="doctor">
+                        <select name="user_id">
                             <option value="">Seleccione una opcion</option>
                             <?php foreach ($DATA['doctores'] as $item) { ?>
                                 <option value="<?= $item['user_id'] ?>">Dr. <?= $item['user_nombre'] ?></option>
                             <?php } ?>
                         </select>
-                        <label for="hora">Elegir una hora: </label>
-                        <select name="hora" id="hora">
-                            <option value="">Seleccione una opcion</option>
-                            <?php foreach ($DATA['horas'] as $item) { ?>
-                                <option value="<?= $item['hora_id'] ?>"><?= $item['hora_hora'] ?></option>
-                            <?php } ?>
-                        </select>
                         <label for="especialidad">Elegir una especialidad: </label>
-                        <select name="especialidad" id="especialidad">
+                        <select name="servicio_id">
                             <option value="">Seleccione una opcion</option>
                             <?php foreach ($DATA['servicios'] as $item) { ?>
                                 <option value="<?= $item['servicio_id'] ?>"><?= $item['servicio_nombre'] ?></option>
@@ -79,7 +95,7 @@
                         </select>
                     </div>
                 </form>
-                <button>
+                <button id="btn-send">
                     <span>Agendar</span>
                     <i class="fas fa-calendar-alt"></i>
                 </button>
@@ -108,6 +124,10 @@
 
 <foot>
     <?php include('./src/templates/public.component/foot.php') ?>
+    <script src="<?= $DATA['http_domain'] ?>public/library.general/confetti.min.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/library.general/flatpickr.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/js.general/validacion.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/js.public/citas.js"></script>
 </foot>
 
 </html>
