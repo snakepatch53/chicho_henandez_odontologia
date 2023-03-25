@@ -136,5 +136,6 @@ class CitaService
             $result['response'] = true;
             $result['data'] = $cita_id;
         }
+        echo json_encode($result);
     }
 }
