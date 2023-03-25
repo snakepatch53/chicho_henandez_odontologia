@@ -14,24 +14,34 @@ const $picker = document.querySelector(".flatpickr").flatpickr({
         },
     ],
     inline: true,
-    onChange: async function (selectedDates, dateStr, instance) {
-        const horas = await selectHoras();
-        if (!horas) return;
-        const citas = await selectCitas(dateStr);
-        const filter_horas = horas.filter((hora) => {
-            return citas.find((cita) => cita["hora_id"] == hora["hora_id"]) == undefined;
-        });
-
-        $html_horas = `<option value="">Seleccione una opcion</option>`;
-        filter_horas.forEach((hora) => ($html_horas += `<option value="${hora["hora_id"]}">${hora["hora_hora"]}</option>`));
-        $citaform_cita["hora_id"].innerHTML = $html_horas;
-        $citaform_cita["hora_id"].disabled = false;
+    onChange: function (selectedDates, dateStr, instance) {
+        $citaform_cita["user_id"].disabled = false;
     },
 });
+
+$citaform_cita["user_id"].onchange = async function (evt) {
+    user_id = evt.target.value;
+    if (evt.target.value == "") {
+        return ($citaform_cita["hora_id"].disabled = true);
+    }
+    const dateStr = $picker.selectedDates[0].toISOString().split("T")[0];
+    const horas = await selectHoras();
+    if (!horas) return;
+    const citas = await selectCitas(dateStr);
+    const filter_horas = horas.filter((hora) => {
+        return citas.find((cita) => cita["hora_id"] == hora["hora_id"] && cita["user_id"] == user_id) == undefined;
+    });
+
+    $html_horas = `<option value="">Seleccione una opcion</option>`;
+    filter_horas.forEach((hora) => ($html_horas += `<option value="${hora["hora_id"]}">${hora["hora_hora"]}</option>`));
+    $citaform_cita["hora_id"].innerHTML = $html_horas;
+    $citaform_cita["hora_id"].disabled = false;
+};
 
 function main() {
     disableFormCita(true);
     $citaform_cita["hora_id"].disabled = true;
+    $citaform_cita["user_id"].disabled = true;
     // confetti
     var confettiSettings = { target: "canvas-confetti" };
     var confetti = new ConfettiGenerator(confettiSettings);
@@ -65,6 +75,7 @@ $btn_send.onclick = async function (evt) {
     }
     if ($citaform_cita["user_id"].value == "") setFieldError($citaform_cita["user_id"], true);
     if ($citaform_cita["servicio_id"].value == "") setFieldError($citaform_cita["servicio_id"], true);
+    // validaciones
     if ($citaform_cliente["cliente_nombre"].value == "") return;
     if ($citaform_cliente["cliente_celular"].value == "") return;
     if ($citaform_cliente["cliente_email"].value == "") return;
@@ -117,7 +128,7 @@ function disableFormCita(bool) {
     } else {
         $calendar_container.classList.remove("disabled");
     }
-    $citaform_cita["user_id"].disabled = bool;
+    // $citaform_cita["user_id"].disabled = bool;
     $citaform_cita["servicio_id"].disabled = bool;
 }
 

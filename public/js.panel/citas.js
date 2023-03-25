@@ -87,10 +87,10 @@ const crudFunction = {
 const uiFunction = {
     database: [],
     giftDatabase: [],
-    getTr: function ({ cita_id, cliente_nombre, user_nombre, user_foto, user_last, cita_fecha, servicio_nombre }) {
+    getTr: function ({ cita_id, cliente_nombre, user_nombre, user_foto, user_last, cita_fecha, hora_hora, servicio_nombre }) {
         // usar moment js para poner la fecha en formato letras
         const fecha = moment(cita_fecha).format("dddd, DD MMMM YYYY");
-        const hora = moment(cita_fecha).format("hh:mm a");
+        const hora = moment(cita_fecha + " " + hora_hora).format("hh:mm a");
         return `
             <tr>
                 <td class="d-none d-md-table-cell fw-bold">${cita_id}</td>

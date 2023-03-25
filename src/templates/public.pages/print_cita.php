@@ -15,7 +15,7 @@ $dompdf->stream("archivo.pdf", array("Attachment" => false));
 function getHTML($DATA)
 {
     $fecha = getFecha($DATA['cita']['cita_fecha']);
-    $hora = $DATA['cita']['hora_hora'];
+    $hora = getHora($DATA['cita']['hora_hora']);
     $cliente_nombre = $DATA['cita']['cliente_nombre'];
     $cliente_celular = $DATA['cita']['cliente_celular'];
     $doctor_nombre = $DATA['cita']['user_nombre'];
@@ -228,4 +228,10 @@ function getFecha(string $strFecha)
 
     $fecha_formateada = ucfirst($fecha_formateada); // Convertir la primera letra del día a mayúscula
     return $fecha_formateada;
+}
+
+function getHora(string $strHora)
+{
+    $hora_12 = date('h:i A', strtotime($strHora));
+    return $hora_12;
 }

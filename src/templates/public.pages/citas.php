@@ -72,19 +72,19 @@
                         </div>
                     </div>
                     <div class="col">
-                        <label for="hora">Horarios disponibles: </label>
-                        <select name="hora_id">
-                            <option value="">Seleccione una opcion</option>
-                            <!-- <?php foreach ($DATA['horas'] as $item) { ?>
-                                <option value="<?= $item['hora_id'] ?>"><?= $item['hora_hora'] ?></option>
-                            <?php } ?> -->
-                        </select>
                         <label for="doctor">Eligir un especialista: </label>
                         <select name="user_id">
                             <option value="">Seleccione una opcion</option>
                             <?php foreach ($DATA['doctores'] as $item) { ?>
                                 <option value="<?= $item['user_id'] ?>">Dr. <?= $item['user_nombre'] ?></option>
                             <?php } ?>
+                        </select>
+                        <label for="hora">Horarios disponibles: </label>
+                        <select name="hora_id">
+                            <option value="">Seleccione una opcion</option>
+                            <!-- <?php foreach ($DATA['horas'] as $item) { ?>
+                                <option value="<?= $item['hora_id'] ?>"><?= $item['hora_hora'] ?></option>
+                            <?php } ?> -->
                         </select>
                         <label for="especialidad">Elegir una especialidad: </label>
                         <select name="servicio_id">
