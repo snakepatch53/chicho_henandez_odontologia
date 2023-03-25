@@ -56,7 +56,7 @@
                         <div class="card bg-secondary text-dark">
                             <div class="card-body">
                                 <h5 class="card-title d-flex justify-content-between">
-                                    <span>Redes Sociales</span>
+                                    <span>Redes</span>
                                     <i class="fas fa-share-alt"></i>
                                 </h5>
                                 <p class="card-text">Total de redes: <?= $DATA['social_total'] ?></p>
@@ -118,7 +118,7 @@
                     <div class="card bg-danger text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
-                                <span>Citas medicas</span>
+                                <span>Citas</span>
                                 <i class="fas fa-calendar-alt"></i>
                             </h5>
                             <p class="card-text">Total de citas: <?= $DATA['citas_total'] ?></p>

@@ -9,12 +9,11 @@
 # 🔴 COSAS QUE ESTOY HACIENDO 🔴
 
 <b><i>(Lunes, 13 de marzo de 2023)</i></b><br>
-🔴 diseño de pagina inicio (administrador panel) <br>
 🔴 validar fechas libres (administrador citas) <br>
 
 # ❌ ERRORES QUE TENGO QUE SOLUCIONAR ❌
 
-❌ En el panel el scroll en Y no esta funcionando<br>
+❌ ninguno
 
 # ✅ COSAS REALIZADAS ✅
 
@@ -69,3 +68,5 @@
 <b><i>Viernes, 24 de marzo de 2023)</i></b><br>
 ✅ Ficha de la cita registrada en PDF <br>
 ✅ Control de privilegios en el panel<br>
+✅ diseño de pagina inicio (administrador panel) <br>
+✅ Solucione el error ✖️ scroll en Y no esta funcionando en el panel<br>

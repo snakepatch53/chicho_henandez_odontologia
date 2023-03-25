@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/sidebar.css">
 <div class="sidebar bg-dark">
     <button class="burguer-button" onclick="handleBurgerSidebar()">
         <i class="fa-solid fa-bars text-light"></i>
