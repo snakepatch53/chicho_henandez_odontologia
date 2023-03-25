@@ -99,12 +99,19 @@
 
                             <div class="col-md-6">
                                 <label for="validationServer04" class="form-label">Doctor</label>
-                                <select class="form-control form-select" name="user_id" id="validationServer04" required>
-                                    <option value="">Seleccione un Doctor</option>
-                                    <?php foreach ($DATA['doctores'] as $item) { ?>
-                                        <option value="<?= $item['user_id'] ?>"><?= $item['user_nombre'] ?></option>
-                                    <?php } ?>
-                                </select>
+                                <!-- RESTRICCION PARA DOCTORES | INICIO -->
+                                <?php if ($_SESSION['user_tipo'] == "user") { ?>
+                                    <select class="form-control form-select" name="user_id" id="validationServer04" required>
+                                        <option value="">Seleccione un Doctor</option>
+                                        <?php foreach ($DATA['doctores'] as $item) { ?>
+                                            <option value="<?= $item['user_id'] ?>"><?= $item['user_nombre'] ?></option>
+                                        <?php } ?>
+                                    </select>
+                                <?php } else { ?>
+                                    <input type="text" name="user_id" value="<?= $_SESSION['user_id'] ?>" hidden>
+                                    <input type="text" class="form-control" value="<?= $_SESSION['user_nombre'] ?>" disabled>
+                                <?php } ?>
+                                <!-- RESTRICCION PARA DOCTORES | FIN -->
                                 <div class="invalid-feedback">
                                     Selecciona el doctor!
                                 </div>
