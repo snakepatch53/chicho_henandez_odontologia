@@ -83,6 +83,10 @@ $btn_send.onclick = async function (evt) {
     formDataCita.append("cliente_id", $citaform_cliente["cliente_id"].value);
     await insertCita(formDataCita);
     $congratulations.classList.add("show");
+    document.querySelector("#cita-date").innerText = moment(date).format("DD/MM/YYYY");
+    document.querySelector("#cita-hour").innerText = $citaform_cita["hora_id"].selectedOptions[0].innerText;
+    document.querySelector("#cita-doctor").innerText = $citaform_cita["user_id"].selectedOptions[0].innerText;
+    document.querySelector("#print-a").href = `${http_domain}citas/print/${$citaform_cliente["cliente_id"].value}`;
 };
 
 // UI FUNCTIONS

@@ -10,4 +10,5 @@
 <title>Dr. Ayora's ⚙️ Panel <?= $DATA['title'] ?></title>
 <script>
     const http_domain = '<?= $DATA['http_domain'] ?>';
+    const SESSION = JSON.parse('<?= json_encode($_SESSION) ?>');
 </script>

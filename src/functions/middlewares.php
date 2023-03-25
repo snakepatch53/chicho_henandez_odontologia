@@ -14,3 +14,12 @@ function middlewareSessionLogout()
         exit();
     }
 }
+
+function middlewareSessionTipoUser_login()
+{
+    middlewareSessionLogin();
+    if ($_SESSION['user_tipo'] != 'user') {
+        header('Location: ' . $_ENV['HTTP_DOMAIN'] . 'panel');
+        exit();
+    }
+}

@@ -58,6 +58,15 @@ $radapter->getHTML('/nosotros', 'nosotros', fn () => middlewareSessionLogout(), 
 });
 
 // CITAS
+$radapter->getHTML('/citas/print/{cita_id}', 'print_cita', function ($DATA, $cita_id) {
+    $cita = (new CitaDao($DATA['mysqlAdapter']))->selectById($cita_id);
+    if (!$cita) header('Location: ../');
+    return [
+        'cita' => $cita,
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
 $radapter->getHTML('/citas', 'citas', fn () => middlewareSessionLogout(), function ($DATA) {
     $info = (new InfoDao($DATA['mysqlAdapter']))->select();
     $social = (new SocialDao($DATA['mysqlAdapter']))->select();

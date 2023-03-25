@@ -26,6 +26,7 @@ class UserService
                     $_SESSION['user_nombre'] = $user['user_nombre'];
                     $_SESSION['user_user'] = $user['user_user'];
                     $_SESSION['user_foto'] = $user['user_foto'];
+                    $_SESSION['user_tipo'] = $user['user_tipo'];
                     $_SESSION['user_last'] = $user['user_last'];
                     $_SESSION['user_created'] = $user['user_created'];
                     $result['status'] = 'success';

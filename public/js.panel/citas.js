@@ -59,7 +59,11 @@ const crudFunction = {
     select: async function () {
         await fetch_query(new FormData($form), "cita", "select").then((res) => {
             if (res.response) {
-                uiFunction.database = res.data;
+                if (SESSION["user_tipo"] == "user") {
+                    uiFunction.database = res.data;
+                } else {
+                    uiFunction.database = res.data.filter((el) => el["user_id"] == SESSION["user_id"]);
+                }
                 uiFunction.refreshTable();
             }
         });
@@ -98,6 +102,9 @@ const uiFunction = {
                 </td>
                 <td class="d-none d-md-table-cell text-center text-md-left">${servicio_nombre}</td>
                 <td class="text-center">
+                    <a class="btn btn-outline-info" href="${http_domain}citas/print/${cita_id}" target="_blank">
+                        <i class="fa-solid fa-print"></i>
+                    </a>
                     <button class="btn btn-outline-primary" onclick="handleFunction.edit(${cita_id})">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </button>

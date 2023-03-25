@@ -25,11 +25,11 @@
                     <canvas id="canvas-confetti"></canvas>
                     <h2>¡Felicidades!</h2>
                     <p>Has agendado una cita con nosotros.</p>
-                    <p>Te esperamos el <span id="cita-date"></span> a las <span id="cita-hour"></span> con el Dr. <span id="cita-doctor"></span></p>
+                    <p>Te esperamos el <span id="cita-date"></span> a las <span id="cita-hour"></span> con el <span id="cita-doctor"></span></p>
                     <p>Recuerda que puedes cancelar tu cita en cualquier momento.</p>
-                    <a href="<?= $DATA['http_domain'] ?>/">
-                        <span>Volver al inicio</span>
-                        <i class="fas fa-home"></i>
+                    <a id="print-a" href="<?= $DATA['http_domain'] ?>/" target="_blank">
+                        <span>Imprimir ticket</span>
+                        <i class="fas fa-print"></i>
                     </a>
                 </div>
                 <form id="citaform-cliente"> <!-- class="show" -->

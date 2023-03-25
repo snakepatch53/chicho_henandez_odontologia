@@ -2,9 +2,7 @@
 
 <br>
 <b><i>(viernes, 24 de marzo de 2023)</i></b><br>
-🟢 Ficha de la cita registrada en PDF <br>
 🟢 Select con buscador en los campos [cliente, servicio, doctor] en el panel <br>
-🟢 Control de privilegios en el panel<br>
 🟢 reunion de presentacion <br>
 🟢 ultimos detalles <br>
 
@@ -68,3 +66,6 @@
 <b><i>(Jueves, 23 de marzo de 2023)</i></b><br>
 ✅ diseño de pagina citas (administrador panel) <br>
 ✅ programacion de controlador pagina publica con javascript <br>
+<b><i>Viernes, 24 de marzo de 2023)</i></b><br>
+✅ Ficha de la cita registrada en PDF <br>
+✅ Control de privilegios en el panel<br>
