@@ -27,7 +27,7 @@ $citaform_cita["user_id"].onchange = async function (evt) {
     const dateStr = $picker.selectedDates[0].toISOString().split("T")[0];
     const horas = await selectHoras();
     if (!horas) return;
-    const citas = await selectCitas(dateStr);
+    const citas = (await selectCitas(dateStr)) || [];
     const filter_horas = horas.filter((hora) => {
         return citas.find((cita) => cita["hora_id"] == hora["hora_id"] && cita["user_id"] == user_id) == undefined;
     });
