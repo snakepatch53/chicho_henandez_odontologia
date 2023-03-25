@@ -4,6 +4,14 @@ let fetch_query = (formData, entity, operation) => {
         headers: new Headers().append("Accept", "application/json"),
         body: formData,
     })
-        .then((res) => res.json())
+        .then((res) => {
+            try {
+                return res.json();
+            } catch (error) {
+                console.log(res.text());
+                console.log(error);
+                return false;
+            }
+        })
         .then((res) => res);
 };
