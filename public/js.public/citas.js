@@ -85,7 +85,7 @@ $btn_send.onclick = async function (evt) {
     if ($citaform_cita["servicio_id"].value == "") return;
     // crud cliente
     const formDataCliente = new FormData($citaform_cliente);
-    if ($citaform_cliente["cliente_id"].value == "0") await insertCliente(formDataCliente);
+    if ($citaform_cliente["cliente_id"].value == "0") $citaform_cliente["cliente_id"].value = await insertCliente(formDataCliente);
     if ($citaform_cliente["cliente_id"].value != "0") await updateCliente(formDataCliente);
     // crud cita
     const date = $picker.selectedDates[0].toISOString().split("T")[0];
@@ -156,7 +156,7 @@ async function insertCliente(formData) {
     return new Promise((resolve, reject) => {
         fetch_query(formData, "cliente", "insert").then((res) => {
             if (!res.response) return resolve(false);
-            return resolve(true);
+            return resolve(res.data);
         });
     });
 }
@@ -184,6 +184,7 @@ async function selectCitas(fecha) {
 async function insertCita(formData) {
     return new Promise((resolve, reject) => {
         fetch_query(formData, "cita", "insert").then((res) => {
+            console.log(res);
             if (!res.response) return resolve(false);
             return resolve(res.data);
         });

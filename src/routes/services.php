@@ -20,8 +20,8 @@ $radapter->post('/services/user/delete', fn () => middlewareSessionServicesLogin
 
 // CLIENTES
 $radapter->post('/services/cliente/select', fn (...$args) => ClienteService::select(...$args));
+$radapter->post('/services/cliente/insert', fn (...$args) => ClienteService::insert(...$args));
 // need to be logged
-$radapter->post('/services/cliente/insert', fn () => middlewareSessionServicesLogin(), fn (...$args) => ClienteService::insert(...$args));
 $radapter->post('/services/cliente/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => ClienteService::update(...$args));
 $radapter->post('/services/cliente/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => ClienteService::delete(...$args));
 
