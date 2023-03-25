@@ -92,12 +92,12 @@ $btn_send.onclick = async function (evt) {
     const formDataCita = new FormData($citaform_cita);
     formDataCita.append("cita_fecha", date);
     formDataCita.append("cliente_id", $citaform_cliente["cliente_id"].value);
-    await insertCita(formDataCita);
+    const cita_id = await insertCita(formDataCita);
     $congratulations.classList.add("show");
     document.querySelector("#cita-date").innerText = moment(date).format("DD/MM/YYYY");
     document.querySelector("#cita-hour").innerText = $citaform_cita["hora_id"].selectedOptions[0].innerText;
     document.querySelector("#cita-doctor").innerText = $citaform_cita["user_id"].selectedOptions[0].innerText;
-    document.querySelector("#print-a").href = `${http_domain}citas/print/${$citaform_cliente["cliente_id"].value}`;
+    document.querySelector("#print-a").href = `${http_domain}citas/print/${cita_id}`;
 };
 
 // UI FUNCTIONS
@@ -185,7 +185,7 @@ async function insertCita(formData) {
     return new Promise((resolve, reject) => {
         fetch_query(formData, "cita", "insert").then((res) => {
             if (!res.response) return resolve(false);
-            return resolve(true);
+            return resolve(res.data);
         });
     });
 }
