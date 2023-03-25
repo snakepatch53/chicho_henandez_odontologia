@@ -23,3 +23,16 @@ function middlewareSessionTipoUser_login()
         exit();
     }
 }
+
+
+function middlewareSessionServicesLogin()
+{
+    if (!isset($_SESSION['user_id'])) {
+        return [
+            'autorized' => false,
+        ];
+    }
+    return [
+        'autorized' => true,
+    ];
+}

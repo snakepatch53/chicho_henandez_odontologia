@@ -13,7 +13,7 @@
         <div class=" pt-4 px-md-5 px-1">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>home">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>/panel">Inicio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Servicios</li>
                 </ol>
             </nav>

@@ -71,8 +71,8 @@ class RAdapter
                     $_ENV['DB_NAME'],
                     $_ENV['DB_PORT']
                 ),
+                "autorized" => true
             ];
-
             // Comprobar si se envio un callback
             if ($callback) {
                 $callback_respponse = $callback($DATA, ...$args);
@@ -80,6 +80,15 @@ class RAdapter
                 if (is_array($callback_respponse)) $DATA = array_merge($DATA, $callback_respponse);
             }
 
+            if ($DATA['autorized'] == false) {
+                echo json_encode([
+                    "status" => "error",
+                    "message" => "No estas autorizado",
+                    "response" => false,
+                    "data" => []
+                ]);
+                return;
+            }
             // Comprobar si se envio un middleware
             if ($middleware) {
                 $middleware_respponse = $middleware($DATA, ...$args);
