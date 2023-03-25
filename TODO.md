@@ -71,3 +71,4 @@
 ✅ diseño de pagina inicio (administrador panel) <br>
 ✅ Solucione el error ✖️ scroll en Y no esta funcionando en el panel<br>
 ✅ Diseño de error 404<br>
+✅ Controlador JS para enviar mensajes en el formulario de contactos (Interfaz publica)<br>
