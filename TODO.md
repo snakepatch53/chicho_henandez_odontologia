@@ -70,3 +70,4 @@
 ✅ Control de privilegios en el panel<br>
 ✅ diseño de pagina inicio (administrador panel) <br>
 ✅ Solucione el error ✖️ scroll en Y no esta funcionando en el panel<br>
+✅ Diseño de error 404<br>

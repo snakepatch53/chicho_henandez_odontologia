@@ -184,7 +184,6 @@ async function selectCitas(fecha) {
 async function insertCita(formData) {
     return new Promise((resolve, reject) => {
         fetch_query(formData, "cita", "insert").then((res) => {
-            console.log(res);
             if (!res.response) return resolve(false);
             return resolve(res.data);
         });

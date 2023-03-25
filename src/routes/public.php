@@ -81,3 +81,11 @@ $radapter->getHTML('/citas', 'citas', fn () => middlewareSessionLogout(), functi
         'servicios' => $servicios
     ];
 });
+
+
+// 404
+$radapter->set404('404', function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});

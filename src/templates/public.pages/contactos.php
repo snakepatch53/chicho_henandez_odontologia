@@ -20,30 +20,40 @@
     <main class="animate__animated animate__fadeIn">
         <section class="contact-form">
             <div class="container">
-                <form action="">
+                <form id="form">
+                    <div class="congratulations" id="congratulations">
+                        <canvas id="confetti"></canvas>
+                        <i class="fas fa-check-circle"></i>
+                        <h2>¡Gracias por contactarnos!</h2>
+                        <p>En breve nos pondremos en contacto contigo.</p>
+                        <a href="<?= $DATA['http_domain'] ?>">
+                            <i class="fas fa-home"></i>
+                            <span>Ir a inicio</span>
+                        </a>
+                    </div>
                     <div class="row">
                         <di class="item">
                             <label for="name"><b>*</b>Nombres y apellidos</label>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="mensaje_nombre">
                             <span class="error"></span>
                         </di>
                     </div>
                     <div class="row">
                         <div class="item">
                             <label for="phone"><b>*</b>Celular</label>
-                            <input type="phone" name="phone" id="phone">
+                            <input type="phone" name="mensaje_celular">
                             <span class="error"></span>
                         </div>
                         <div class="item">
                             <label for="email"><b>*</b>Correo electronico</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="mensaje_email">
                             <span class="error"></span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="item">
                             <label for="message"><b>*</b>Mensaje</label>
-                            <textarea name="message" id="message"></textarea>
+                            <textarea name="mensaje_mensaje"></textarea>
                             <span class="error"></span>
                         </div>
                     </div>
@@ -67,6 +77,8 @@
 
 <foot>
     <?php include('./src/templates/public.component/foot.php') ?>
+    <script src="<?= $DATA['http_domain'] ?>public/library.general/confetti.min.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/js.public/contactos.js"></script>
 </foot>
 
 </html>
