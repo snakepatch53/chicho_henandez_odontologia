@@ -6,6 +6,14 @@ class RAdapter
     private $router;
     private String $path;
     private string $http_domain;
+    /**
+     * The function __construct() is a constructor method that is called when an object is instantiated. It is used to initialize the
+     * object's properties
+     * 
+     * @param router The router object
+     * @param string path The path to the folder where the images are stored.
+     * @param string http_domain The domain name of the website.
+     */
     function __construct($router, string $path, string $http_domain)
     {
         $this->router = $router;
@@ -13,6 +21,15 @@ class RAdapter
         $this->http_domain = $http_domain;
     }
 
+    /**
+     * It creates a route that renders a view
+     * 
+     * @param String selector The route selector
+     * @param String name The name of the view
+     * @param callback This is a function that will be executed before the view is rendered.
+     * @param middleware This is a function that will be executed before the view is rendered.
+     * @param bool auto_include If true, it will include a file with the same name as the view name.
+     */
     public function getHTML(String $selector, String $name, $callback = null, $middleware = null, bool $auto_include = true)
     {
         $this->router->get($selector, function (...$args) use ($name, $callback, $middleware, $auto_include) {
@@ -57,6 +74,14 @@ class RAdapter
         });
     }
 
+    /**
+     * It sets a 404 page.
+     * 
+     * @param String name The name of the view
+     * @param callback This is a function that will be executed before the view is rendered.
+     * @param middleware This is a function that will be executed before the view is loaded.
+     * @param bool auto_include If true, it will automatically include a file with the same name as the view name.
+     */
     public function set404(String $name, $callback = null, $middleware = null, bool $auto_include = true)
     {
         $this->router->set404(function (...$args) use ($name, $callback, $middleware, $auto_include) {
@@ -100,6 +125,14 @@ class RAdapter
             }
         });
     }
+
+    /**
+     * It's a function that receives a selector, a callback and a middleware. The callback and middleware are optional
+     * 
+     * @param String selector The route selector, e.g. /user/{id}
+     * @param callback This is the function that will be executed when the route is called.
+     * @param middleware This is a function that will be executed before the callback.
+     */
     public function post(String $selector, $callback = null, $middleware = null)
     {
         $this->router->post($selector, function (...$args) use ($callback, $middleware) {
@@ -141,6 +174,12 @@ class RAdapter
             }
         });
     }
+
+    /**
+     * This function returns the router object.
+     * 
+     * @return Router The router object.
+     */
     public function getRouter()
     {
         return $this->router;
