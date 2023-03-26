@@ -108,7 +108,7 @@
                                     <label for="user_tipo2">Doctor</label>
                                 </div>
                                 <div class="invalid-feedback">
-                                    Escribe la contraseña!
+                                    Selecciona el tipo de cuenta!
                                 </div>
                             </div>
 

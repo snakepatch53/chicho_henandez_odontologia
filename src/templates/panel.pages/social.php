@@ -93,19 +93,6 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
-                                <label for="validationServer04" class="form-label">Tipo</label>
-                                <div class="input_switch">
-                                    <input type="radio" name="user_tipo" id="user_tipo1" value="user" checked>
-                                    <label for="user_tipo1">Usuario</label>
-                                    <input type="radio" name="user_tipo" id="user_tipo2" value="doctor">
-                                    <label for="user_tipo2">Doctor</label>
-                                </div>
-                                <div class="invalid-feedback">
-                                    Escribe la contraseña!
-                                </div>
-                            </div>
-
 
 
                         </div>
