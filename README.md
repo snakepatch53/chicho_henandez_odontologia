@@ -50,7 +50,7 @@
 
 # 📦 DOCUMENTACION DE INSTALACION
 
-## ⚙️ INSTALACION AUTOMATICA CON .BAT
+## ⚙️ INSTALACION AUTOMATICA CON .PS1
 
 Ejecutalo con powershell
 <a href="./src/assets/install_win.rar">Descargar archivo 📥</a>
