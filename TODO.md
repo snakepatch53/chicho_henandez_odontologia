@@ -1,15 +1,15 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
-<br>
+🟢 Ninguno..
 
 # 🔴 COSAS QUE ESTOY HACIENDO 🔴
 
 <b><i>(Lunes, 13 de marzo de 2023)</i></b><br>
-🔴 validar fechas libres (administrador citas) <br>
+🔴 Ninguno..
 
 # ❌ ERRORES QUE TENGO QUE SOLUCIONAR ❌
 
-❌ ninguno
+❌ Ninguno..
 
 # ✅ COSAS REALIZADAS ✅
 
