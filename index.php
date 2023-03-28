@@ -28,7 +28,7 @@ require_once('./src/dao/SocialDao.php');
 require_once('./src/dao/MensajeDao.php');
 require_once('./src/dao/CitaDao.php');
 
-// cargamos los servicios para el web service
+// cargamos los servicios para el web service (WEB SERVICE)
 require_once('./src/services/info.service.php');
 require_once('./src/services/user.service.php');
 require_once('./src/services/cliente.service.php');

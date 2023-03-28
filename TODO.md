@@ -1,10 +1,6 @@
 # 🟢 COSAS QUE TENGO QUE HACER 🟢 <br>
 
 <br>
-<b><i>(viernes, 24 de marzo de 2023)</i></b><br>
-🟢 Select con buscador en los campos [cliente, servicio, doctor] en el panel <br>
-🟢 reunion de presentacion <br>
-🟢 ultimos detalles <br>
 
 # 🔴 COSAS QUE ESTOY HACIENDO 🔴
 
@@ -72,3 +68,6 @@
 ✅ Solucione el error ✖️ scroll en Y no esta funcionando en el panel<br>
 ✅ Diseño de error 404<br>
 ✅ Controlador JS para enviar mensajes en el formulario de contactos (Interfaz publica)<br>
+✅ Select con buscador en los campos [cliente, servicio, doctor] en el panel <br>
+✅ reunion de presentacion <br>
+✅ ultimos detalles <br>
